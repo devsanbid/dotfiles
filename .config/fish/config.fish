@@ -105,7 +105,7 @@ alias cat 'bat --style header --style snip --style changes --style header'
 
 # Starship prompt
  if status --is-interactive
-    source ("/usr/bin/starship" init fish --print-full-init | psub)
+    source (starship init fish --print-full-init | psub)
  end
 
 # syntax highlight
@@ -137,4 +137,4 @@ set --export KITTY_ENABLE_WAYLAND 1
 # <<< conda initialize <<<
 
 
-source ~/.config/fish/private_variable.fish
+# source ~/.config/fish/private_variable.fish
