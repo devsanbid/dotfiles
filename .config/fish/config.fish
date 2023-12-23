@@ -34,6 +34,9 @@ abbr -a bin bun create-next@latest
 abbr -a bif bun add react-hook-form @hookform/resolvers
 abbr -a bic bun add bcryptjs @types/bcryptjs
 abbr -a biz bun add zod
+abbr -a bas bunx --bun shadcn-ui@latest init
+abbr -a bsa bunx --bun shadcn-ui@latest add 
+
 
 bind -m default \x20eh 'nvim ~/dotfiles/.config/hypr/hyprland.conf'
 bind -m default \x20ef 'nvim ~/dotfiles/.config/fish/config.fish'
