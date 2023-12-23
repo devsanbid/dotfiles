@@ -1,0 +1,84 @@
+## Garuda Linux configuration for Alacritty
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 100
+    lines: 30
+  dynamic_padding: true
+  decorations: full
+  title: Alacritty
+  opacity: 0.3
+  class:
+    instance: Alacritty
+    general: Alacritty
+  decorations_theme_variant: Dark
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  size: 18
+  normal:
+    family: SauceCodePro Nerd Font
+  bold:
+    family: SauceCodePro Nerd Font
+  italic:
+    family: SauceCodePro Nerd Font
+  bold_italic:
+    family: SauceCodePro Nerd Font
+    size: 14.0
+
+draw_bold_text_with_bright_colors: true
+
+save_to_clipboard: true
+
+window.dynamic_title: true
+
+cursor:
+  style: block
+
+live_config_reload: true
+
+shell:
+  program: /usr/bin/fish
+
+mouse:
+  hide_when_typing: true
+
+key_bindings:
+  # (Windows, Linux, and BSD only)
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+
+# Custom colorscheme fitting Sweetified theme
+colors:
+  # Default colors
+  primary:
+    background: "#000000"
+    foreground: "#f8f8f2"
+
+  # Normal colors
+  normal:
+    black: "#000000"
+    red: "#ff5555"
+    green: "#50fa7b"
+    yellow: "#f1fa8c"
+    blue: "#caa9fa"
+    magenta: "#ff79c6"
+    cyan: "#8be9fd"
+    white: "#bfbfbf"
+
+  # Bright colors
+  bright:
+    black: "#575b70"
+    red: "#ff6e67"
+    green: "#5af78e"
+    yellow: "#f4f99d"
+    blue: "#caa9fa"
+    magenta: "#ff92d0"
+    cyan: "#9aedfe"
+    white: "#e6e6e6"
+theme: Dracula

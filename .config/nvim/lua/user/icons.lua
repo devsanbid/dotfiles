@@ -1,0 +1,5 @@
+return {
+  icons = {
+    FoldClosed = "X",
+  },
+}

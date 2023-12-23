@@ -1,0 +1,25 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+scan_timeout = 10
+
+nodejs.disabled = true
+bun.disabled = true
+rust.disabled = true
+scala.disabled = true
+python.disabled = true
+dotnet.disabled = true
+golang.disabled = true
+lua.disabled = true
+zig.disabled = true
+shell.disabled = true
+
+command_timeout = 10
+
+[git_status]
+conflicted = 'X'
+untracked = 'U'
+modified = 'M'
+staged = 'S'
+renamed = 'R'
+deleted = 'D'
