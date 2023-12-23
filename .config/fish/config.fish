@@ -20,11 +20,26 @@ set fish_autosuggestion_enabled 0
 zoxide init fish | source
 export LS_COLORS="$(vivid generate $HOME/.config/vivid/colorscheme-lsd.yaml)"
 
+set -g fish_key_bindings fish_vi_key_bindings
+
+set -g fish_escape_delay_ms 100
+
 bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
 bind -M insert kj "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
 bind -M insert KJ "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
 bind -M insert JK "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
 
+
+abbr -a bin bun create-next@latest
+abbr -a bif bun add react-hook-form @hookform/resolvers
+abbr -a bic bun add bcryptjs @types/bcryptjs
+abbr -a biz bun add zod
+
+bind -m default \x20e "exec fish -c 'nvim ~/dotfiles/.config/hypr/hyprland.conf'"
+bind -m default \x20\x20 "exec fish -c 'fzf | xargs nvim'"
+bind -m default \x20r "exec fish -c 'source ~/.config/fish/config.fish'"
+bind -m default \x20gs "exec fish -c 'cd ~/dotfiles && git add --all && git commit -a -m \"$(random)\"'"
+bind -m default \x20gp "exec fish -c 'cd ~/dotfiles && git push' "
 
 function cd
     builtin cd $argv; and ls
