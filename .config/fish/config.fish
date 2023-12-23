@@ -35,11 +35,15 @@ abbr -a bif bun add react-hook-form @hookform/resolvers
 abbr -a bic bun add bcryptjs @types/bcryptjs
 abbr -a biz bun add zod
 
-bind -m default \x20e "exec fish -c 'nvim ~/dotfiles/.config/hypr/hyprland.conf'"
-bind -m default \x20\x20 "exec fish -c 'fzf | xargs nvim'"
-bind -m default \x20r "exec fish -c 'source ~/.config/fish/config.fish'"
-bind -m default \x20gs "exec fish -c 'cd ~/dotfiles && git add --all && git commit -a -m \"$(random)\"'"
-bind -m default \x20gp "exec fish -c 'cd ~/dotfiles && git push' "
+bind -m default \x20eh 'nvim ~/dotfiles/.config/hypr/hyprland.conf'
+bind -m default \x20ef 'nvim ~/dotfiles/.config/fish/config.fish'
+bind -m default gp "cd ~/Desktop/project/pratice &> /dev/null"
+bind -m default gw "cd ~/Desktop/project/working &> /dev/null"
+bind -m default \x20\x20 'cd ~ && fzf | xargs nvim {} && clear'
+bind -m default \x20r 'source ~/.config/fish/config.fish'
+bind -m default \x20gs 'cd ~/dotfiles && git add --all && git commit -a -m \"$(random)\"'
+bind -m default \x20gp 'cd ~/dotfiles && git push'
+bind -m default \x20c 'clear'
 
 function cd
     builtin cd $argv; and ls
