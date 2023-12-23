@@ -2,7 +2,6 @@
 
 
 scan_timeout = 10
-command_timeout = 20
 
 nodejs.disabled = true
 bun.disabled = true
@@ -16,6 +15,7 @@ zig.disabled = true
 shell.disabled = true
 
 
+command_timeout = 15
 [git_status]
 conflicted = 'X'
 untracked = 'U'
@@ -23,3 +23,4 @@ modified = 'M'
 staged = 'S'
 renamed = 'R'
 deleted = 'D'
+
