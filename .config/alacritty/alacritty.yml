@@ -9,7 +9,7 @@ window:
   dynamic_padding: true
   decorations: full
   title: Alacritty
-  opacity: 0.3
+  opacity: 0.6
   class:
     instance: Alacritty
     general: Alacritty
