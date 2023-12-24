@@ -126,6 +126,10 @@ else
   bind '$' __history_previous_command_arguments
 end
 
+if not test -x /usr/bin/yay; and test -x /usr/bin/paru
+    alias yay 'paru'
+end
+
 # Fish command history
 function history
     builtin history --show-time='%F %T '
