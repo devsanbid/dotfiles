@@ -127,7 +127,7 @@ else
 end
 
 if not test -x /usr/bin/yay; and test -x /usr/bin/paru
-    alias yay 'paru'
+    alias yay 'paru --bottomup'
 end
 
 # Fish command history
