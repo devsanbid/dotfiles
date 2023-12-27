@@ -7,7 +7,8 @@ return {
     wrap = false, -- sets vim.opt.wrap
     guicursor = "",
     cursorline = false,
-    mouse = ""
+    mouse = "",
+    scrolloff = 12
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
