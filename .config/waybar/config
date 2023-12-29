@@ -28,7 +28,7 @@
         "format": "{}"
     },
     "tray": {
-        "spacing": 30
+        "spacing": 10
     },
     "custom/pacman": {
       "format": "{icon} {}",
