@@ -212,7 +212,7 @@ alias tb 'nc termbin.com 9999'
 alias helpme 'echo "To print basic information about a command use tldr <command>"'
 alias pacdiff 'sudo -H DIFFPROG=meld pacdiff'
 alias as 'NVIM_APPNAME=astronvim nvim'
-alias cc 'clear'
+alias cls 'clear'
 alias kill 'ps -ef | fzf --bind="ctrl-r:reload(ps -ef)" --header="press ctrl + r to reload" | awk "{print $2}" | xargs kill -9 && echo "Killed"'
 
 
