@@ -8,7 +8,7 @@ return {
     guicursor = "",
     cursorline = false,
     mouse = "",
-    scrolloff = 12
+    scrolloff = 12,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader

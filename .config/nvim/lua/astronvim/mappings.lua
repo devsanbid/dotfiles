@@ -34,6 +34,21 @@ maps.n["\\"] = { "<cmd>split<cr>", desc = "Horizontal Split" }
 -- TODO: Remove when dropping support for <Neovim v0.10
 if not vim.ui.open then maps.n["gx"] = { utils.system_open, desc = "Open the file under cursor with system app" } end
 
+local keymap = vim.keymap
+
+-- Harpoon
+keymap.set("n", "<leader>ha", require("harpoon.mark").add_file)
+keymap.set("n", "<leader>hh", require("harpoon.ui").toggle_quick_menu)
+keymap.set("n", "<leader>h1", function() require("harpoon.ui").nav_file(1) end)
+keymap.set("n", "<leader>h2", function() require("harpoon.ui").nav_file(2) end)
+keymap.set("n", "<leader>h3", function() require("harpoon.ui").nav_file(3) end)
+keymap.set("n", "<leader>h4", function() require("harpoon.ui").nav_file(4) end)
+keymap.set("n", "<leader>h5", function() require("harpoon.ui").nav_file(5) end)
+keymap.set("n", "<leader>h6", function() require("harpoon.ui").nav_file(6) end)
+keymap.set("n", "<leader>h7", function() require("harpoon.ui").nav_file(7) end)
+keymap.set("n", "<leader>h8", function() require("harpoon.ui").nav_file(8) end)
+keymap.set("n", "<leader>h9", function() require("harpoon.ui").nav_file(9) end)
+
 -- Plugin Manager
 maps.n["<leader>p"] = sections.p
 maps.n["<leader>pi"] = { function() require("lazy").install() end, desc = "Plugins Install" }
@@ -47,6 +62,20 @@ maps.n["<leader>pa"] = { "<cmd>AstroUpdatePackages<cr>", desc = "Update Plugins 
 maps.n["<leader>pA"] = { "<cmd>AstroUpdate<cr>", desc = "AstroNvim Update" }
 maps.n["<leader>pv"] = { "<cmd>AstroVersion<cr>", desc = "AstroNvim Version" }
 maps.n["<leader>pl"] = { "<cmd>AstroChangelog<cr>", desc = "AstroNvim Changelog" }
+
+vim.cmd("noremap <up> <nop>")
+vim.cmd("noremap <Down> <Nop>")
+vim.cmd("noremap <Left> <Nop>")
+vim.cmd("noremap <Right> <Nop>")
+vim.cmd("inoremap <Up> <Nop>")
+vim.cmd("inoremap <Down> <Nop>")
+vim.cmd("inoremap <Left> <Nop>")
+vim.cmd("inoremap <Right> <Nop>")
+vim.cmd("vnoremap im aBoV")
+vim.cmd("nnoremap J 5j")
+vim.cmd("nnoremap K 5k")
+vim.cmd('nnoremap "" vi"')
+vim.cmd("vnoremap am aBjoV")
 
 -- Manage Buffers
 maps.n["<leader>c"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" }

@@ -13,11 +13,12 @@ return {
         javascript = "bun",
         reactjavascript = "bun",
         typescriptreact = "bun",
-        rust = {
-          "cd $dir &&",
-          "rustc $fileName &&",
-          "$dir/$fileNameWithoutExt",
-        },
+        -- rust = {
+        --   "cd $dir &&",
+        --   "rustc $fileName &&",
+        --   "$dir/$fileNameWithoutExt",
+        -- },
+        rust = "cargo run -q",
         markdown = {
           "slides",
         },

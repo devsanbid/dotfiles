@@ -2,7 +2,11 @@ return {
   "nvim-lua/plenary.nvim",
   "echasnovski/mini.bufremove",
   { "AstroNvim/astrotheme", opts = { plugins = { ["dashboard-nvim"] = true } } },
-  { "max397574/better-escape.nvim", event = "InsertCharPre", opts = { timeout = 300 } },
+  {
+    "max397574/better-escape.nvim",
+    event = "InsertCharPre",
+    opts = { timeout = 300, clear_empty_lines = true, mapping = { "jk", "jj", "JK", "KJ", "kj" } },
+  },
   { "NMAC427/guess-indent.nvim", event = "User AstroFile", config = require "plugins.configs.guess-indent" },
   { -- TODO: REMOVE neovim-session-manager with AstroNvim v4
     "Shatur/neovim-session-manager",
