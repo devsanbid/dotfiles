@@ -8,6 +8,7 @@ return {
           "javac $fileName &&",
           "java $fileNameWithoutExt",
         },
+        fish = "fish",
         python = "python3 -u",
         typescript = "bun",
         javascript = "bun",
