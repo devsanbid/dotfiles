@@ -52,6 +52,11 @@ function cd
     builtin cd $argv; and ls
 end
 
+function cdx
+    builtin cd $argv
+end
+
+
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
    set -x QT_QPA_PLATFORMTHEME "qt5ct"
@@ -207,8 +212,7 @@ alias wget 'wget -c '
 alias lvim 'NVIM_APPNAME=lazynvim nvim'
 alias skf "sk --ansi -i -c 'fd --hidden "{}"'"
 alias skw "sk --ansi -i -c 'rg --color=always --hidden --line-number "{}"'"
-alias nv "NVIM_APPNAME=nv nvim"
-alias nvim "nv"
+alias vim "NVIM_APPNAME=nv nvim"
 
 
 # Get fastest mirrors

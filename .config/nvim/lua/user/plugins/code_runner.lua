@@ -14,6 +14,12 @@ return {
         javascript = "bun",
         reactjavascript = "bun",
         typescriptreact = "bun",
+        c = {
+          "cdx $dir &&",
+          "gcc $fileName",
+          "-o $fileNameWithoutExt &&",
+          "$dir/$fileNameWithoutExt",
+        },
         -- rust = {
         --   "cd $dir &&",
         --   "rustc $fileName &&",
