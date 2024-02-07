@@ -58,6 +58,10 @@ function cdx
     builtin cd $argv
 end
 
+function mkdir
+    command mkdir -p $argv[1]
+    and cd $argv[1]
+end
 
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
@@ -151,6 +155,7 @@ alias ls 'eza --color=always --group-directories-first --icons'  # all files and
 alias ll 'eza -l --color=always --group-directories-first --icons'  # long format
 alias lt 'eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l. 'eza -ald --color=always --group-directories-first --icons .*' # show only dotfiles
+alias cargo 'cargo -q'
 
 # Replace some more things with better alternatives
 alias cat 'bat --style header --style snip --style changes --style header'
