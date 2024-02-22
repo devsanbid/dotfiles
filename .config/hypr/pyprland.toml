@@ -1,0 +1,21 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+
+[scratchpads.term]
+command = "alacritty --class kitty-dropterm"
+margin = 50
+lazy = true
+size = "55% 80%"
+
+
+[scratchpads.volume]
+command = "pavucontrol"
+class = "pavucontrols"
+lazy = true
+size = "50% 80%"
+
+[scratchpads.chrome]
+command = "thorium-browser --app=http://localhost:3000"
+size = "50% 30%"
+class = "ai"

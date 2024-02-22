@@ -13,6 +13,7 @@ set -x FZF_CTRL_T_OPTS "
 set GOOGLEAPI "AIzaSyDnOgJjFJL2k-FUbQhkaGIyO-u743tizg4"
 set -x LIBVIRT_DEFAULT_URL 'qemu:///system'
 set GIT_LFS_SKIP_SMUDGE 1
+set OPENAI_API_KEY ""
 
 fish_vi_key_bindings
 
@@ -48,7 +49,8 @@ bind -m default \x20\x20 'cd ~ && fzf | xargs nvim {} && clear'
 bind -m default \x20r 'source ~/.config/fish/config.fish'
 bind -m default \x20gs 'cd ~/dotfiles && git add --all && git commit -a -m \"$(random)\"'
 bind -m default \x20gp 'cd ~/dotfiles && git push'
-bind -m default \x20c 'clear'
+
+alias ivm 'vim'
 
 function cd
     builtin cd $argv; and ls
@@ -208,6 +210,7 @@ alias helpme 'echo "To print basic information about a command use tldr <command
 alias pacdiff 'sudo -H DIFFPROG=meld pacdiff'
 alias as 'NVIM_APPNAME=astronvim nvim'
 alias cls 'clear'
+alias cl 'clear'
 alias kill 'ps -ef | fzf --bind="ctrl-r:reload(ps -ef)" --header="press ctrl + r to reload" | awk "{print $2}" | xargs kill -9 && echo "Killed"'
 
 

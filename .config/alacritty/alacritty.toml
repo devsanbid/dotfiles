@@ -1,0 +1,22 @@
+
+[window]
+padding = { x = 10, y = 10 }
+decorations = "None"
+dynamic_padding = true
+opacity = 0.91
+blur = true
+
+[font]
+normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
+bold = { family = "SauceCodePro Nerd Font", style = "Bold" }
+italic = { family = "SauceCodePro Nerd Font", style = "Italic" }
+offset = { x = 0, y = 5 }
+size = 20
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+thickness = 0.13
+
+[keyboard]
+bindings = []
+

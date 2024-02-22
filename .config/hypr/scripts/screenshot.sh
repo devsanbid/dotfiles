@@ -3,7 +3,6 @@
 if [ -z "$XDG_PICTURES_DIR" ] ; then
     XDG_PICTURES_DIR="$HOME/Pictures"
 fi
-
 ScrDir=`dirname $(realpath $0)`
 source $ScrDir/globalcontrol.sh
 swpy_dir="$HOME/.config/swappy"
@@ -22,17 +21,19 @@ cat << "EOF"
     ...valid actions are...
         p : print all screens
         s : snip current screen
+        x : copy screenshot text
         m : print focused monitor
 EOF
 }
 
 case $1 in
 p)  # print all outputs
-    grimblast copysave screen $temp_screenshot && swappy -f $temp_screenshot ;;
-s)  # drag to manually snip an area / click on a window to print it
     grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
+x)  # drag to manually snip an area / click on a window to print it
+    grimblast copysave area $temp_screenshot && tesseract -l eng $temp_screenshot - | wl-copy ;;
+s) grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
 m)  # print focused monitor
-    grimblast copysave output $temp_screenshot && swappy -f $temp_screenshot ;;
+    grimblast copysave outp && swappy -f $temp_screenshot ;;
 *)  # invalid option
     print_error ;;
 esac
