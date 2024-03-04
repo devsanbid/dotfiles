@@ -24,8 +24,8 @@ set -q fish_tmux_autoconnect || set fish_tmux_autoconnect true
 set -q fish_tmux_autoquit || set fish_tmux_autoquit $fish_tmux_autostart
 set -q fish_tmux_fixterm || set fish_tmux_fixterm true
 set -q fish_tmux_iterm2 || set fish_tmux_iterm2 false
-set -q fish_tmux_fixterm_without_256color || set fish_tmux_fixterm_without_256color "screen"
-set -q fish_tmux_fixterm_with_256color || set fish_tmux_fixterm_with_256color "screen-256color"
+set -q fish_tmux_fixterm_without_256color || set fish_tmux_fixterm_without_256color "xterm-kitty"
+set -q fish_tmux_fixterm_with_256color || set fish_tmux_fixterm_with_256color "xterm-kitty"
 set -q fish_tmux_config || set -x fish_tmux_config "$HOME/.tmux.conf"
 set -q fish_tmux_unicode || set fish_tmux_unicode false
 

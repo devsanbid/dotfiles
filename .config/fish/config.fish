@@ -227,3 +227,4 @@ set -Ux fish_tmux_config $HOME/.config/tmux/tmux.conf
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+set TERM "xterm-kitty"
