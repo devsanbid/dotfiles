@@ -4,7 +4,8 @@ SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_budimanjojo_2F_tmux_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/tmux\x2eextra\x2econf\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux\x2eonly\x2econf\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux_abbrs\x2efish
-SETUVAR _fisher_plugins:budimanjojo/tmux\x2efish
+SETUVAR _fisher_kidonng_2F_nix_2D_completions_2E_fish_files:\x7e/\x2econfig/fish/functions/_nix_complete_common_options\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2dchannel\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2dcollect\x2dgarbage\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2dcopy\x2dclosure\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2denv\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2dhash\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2dinstantiate\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2dprefetch\x2durl\x2efish\x1e\x7e/\x2econfig/fish/completions/nix\x2efish
+SETUVAR _fisher_plugins:budimanjojo/tmux\x2efish\x1ekidonng/nix\x2dcompletions\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr

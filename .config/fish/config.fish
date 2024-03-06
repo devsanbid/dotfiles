@@ -61,11 +61,6 @@ function cdx
     builtin cd $argv
 end
 
-function mkdir
-    command mkdir -p $argv[1]
-    and cd $argv[1]
-end
-
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
    set -x QT_QPA_PLATFORMTHEME "qt5ct"
