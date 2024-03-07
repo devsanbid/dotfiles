@@ -187,7 +187,7 @@ alias wget 'wget -c '
 alias lvim 'NVIM_APPNAME=lazynvim nvim'
 alias skf "sk --ansi -i -c 'fd --hidden "{}"'"
 alias skw "sk --ansi -i -c 'rg --color=always --hidden --line-number "{}"'"
-alias vim "NVIM_APPNAME=nv nvim"
+alias vim "nvim"
 alias docker "podman"
 
 
