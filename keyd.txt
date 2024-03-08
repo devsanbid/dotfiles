@@ -1,2 +1,16 @@
+[ids]
+
+*
+
+[main]
+
+capslock = overload(capslock_layer, esc)
+
+[capslock_layer]
+
+h = left
+j = down
+k = up
+l = right
 
 
