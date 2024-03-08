@@ -1,6 +1,37 @@
 return {
-  { 'williamboman/mason.nvim' },
-  { 'williamboman/mason-lspconfig.nvim' },
+  {
+    'williamboman/mason.nvim',
+    dependencies = {
+      'williamboman/mason-lspconfig.nvim',
+    },
+    config = function()
+      require('mason').setup()
+      require('mason-lspconfig').setup {
+        ensure_installed = {
+          'lua_ls',
+          'rust_analyzer',
+          'cssls',
+          'graphql',
+          'dockerls',
+          'bashls',
+          'astro',
+          'ansiblels',
+          'html',
+          'prismals',
+          'marksman',
+          'astro',
+          'jqls',
+          'yamlls',
+          'pyright',
+          'tailwindcss',
+          'tsserver',
+          'clangd',
+          'taplo',
+          'biome',
+        },
+      }
+    end,
+  },
 
   { -- LSP Support
     'VonHeikemen/lsp-zero.nvim',
@@ -8,8 +39,8 @@ return {
     lazy = true,
     config = false,
     keys = {
-      { "<leader>i", "<cmd>LspInfo<cr>",    "Lsp Info" },
-      { "<leader>I", "<cmd>LspInstall<cr>", "Lsp Install" },
+      { '<leader>i', '<cmd>LspInfo<cr>',    'Lsp Info' },
+      { '<leader>I', '<cmd>LspInstall<cr>', 'Lsp Install' },
     },
   },
 
@@ -25,9 +56,9 @@ return {
     dependencies = {
       { 'L3MON4D3/LuaSnip' },
       { 'saadparwaiz1/cmp_luasnip' },
-      { "rafamadriz/friendly-snippets" }, -- useful snippets
+      { 'rafamadriz/friendly-snippets' }, -- useful snippets
       { 'SirVer/ultisnips' },
       { 'quangnguyen30192/cmp-nvim-ultisnips' },
-    }
-  }
+    },
+  },
 }
