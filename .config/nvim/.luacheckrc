@@ -1,9 +1,6 @@
 -- Global objects
 globals = {
-  "astronvim",
-  "astronvim_installation",
   "vim",
-  "bit",
 }
 
 -- Rerun tests only if their modification time changed

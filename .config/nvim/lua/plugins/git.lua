@@ -1,17 +1,27 @@
-local get_icon = require("astronvim.utils").get_icon
 return {
-  "lewis6991/gitsigns.nvim",
-  enabled = vim.fn.executable "git" == 1,
-  event = "User AstroGitFile",
-  opts = {
-    signs = {
-      add = { text = get_icon "GitSign" },
-      change = { text = get_icon "GitSign" },
-      delete = { text = get_icon "GitSign" },
-      topdelete = { text = get_icon "GitSign" },
-      changedelete = { text = get_icon "GitSign" },
-      untracked = { text = get_icon "GitSign" },
-    },
-    worktrees = vim.g.git_worktrees,
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup({
+        signs = {
+          add = { text = "a" },
+          change = { text = "c" },
+          delete = { text = "d" },
+          topdelete = { text = "‾" },
+          changedelete = { text = "~" },
+          untracked = { text = "u" },
+        },
+      })
+      vim.keymap.set({ "v", "n" }, "<leader>gp", ":Gitsigns preview_hunk<cr>", { silent = true })
+      vim.keymap.set({ "n", "v" }, "<leader>gP", ":Gitsigns preview_hunk_inline<cr>", { silent = true })
+      vim.keymap.set("n", "<leader>g[", ":Gitsigns prev_hunk<cr>", { silent = true })
+      vim.keymap.set("n", "<leader>g]", ":Gitsigns next_hunk<cr>", { silent = true })
+    end,
+  },
+  {
+
+    "tpope/vim-fugitive",
+    config = function ()
+    end
   },
 }

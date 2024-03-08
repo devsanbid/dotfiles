@@ -15,6 +15,7 @@ set GOOGLEAPI "AIzaSyDnOgJjFJL2k-FUbQhkaGIyO-u743tizg4"
 set -x LIBVIRT_DEFAULT_URL 'qemu:///system'
 set GIT_LFS_SKIP_SMUDGE 1
 set OPENAI_API_KEY ""
+bind \cf "tmux-sessionizer"
 
 fish_vi_key_bindings
 
