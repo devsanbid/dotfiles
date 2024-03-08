@@ -67,11 +67,11 @@ icodir="~/.config/dunst/icons/vol"
 
 case $1 in
     i) pamixer $srce -i ${step}
-        notify_vol ;;
+         ;;
     d) pamixer $srce -d ${step}
-        notify_vol ;;
+         ;;
     m) pamixer $srce -t
-        notify_mute ;;
+         ;;
     *) print_error ;;
 esac
 
