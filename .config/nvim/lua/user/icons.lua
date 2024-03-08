@@ -1,5 +1,0 @@
-return {
-  icons = {
-    FoldClosed = "X",
-  },
-}
