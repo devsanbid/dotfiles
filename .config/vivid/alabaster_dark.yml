@@ -1,23 +1,18 @@
 colors:
-  # Original "snazzy" theme by sindresorhus
-  # https://github.com/sindresorhus/hyper-snazzy
-  background_color: '282a36'
-  white: 'eff0eb'
-  red: 'ff5c57'
-  green: '5af78e'
-  yellow: 'f3f99d'
-  blue: '57c7ff'
-  pink: 'ff6ac1'
-  cyan: '9aedfe'
+  background_color: '0e1415'
+  white: 'cecece'
+  red: 'd2322d'
+  green: '6abf40'
+  yellow: 'cd974b'
+  blue: '217ebc'
+  pink: '9b3596'
+  cyan: '178f79'
 
-  rose: 'f9b79d'
-
-  light_red: 'ff8b89'
-  light_green: 'a5ffc3'
-  light_yellow: 'f9fccf'
-  light_blue: 'a3e1ff'
-  light_pink: 'ffb4df'
-  light_cyan: 'd4f7fe'
+  light_red: 'd55d55'
+  light_green: '95cb82'
+  light_blue: '71aed7'
+  light_pink: 'cc8bc9'
+  light_cyan: '47BEA9'
 
   black: '000000'
   gray: '999999'
@@ -30,10 +25,10 @@ core:
   reset_to_normal: {}
 
   directory:
-    foreground: blue
+    foreground: light_blue
 
   symlink:
-    foreground: pink
+    foreground: light_pink
 
   multi_hard_link: {}
 
@@ -43,17 +38,19 @@ core:
 
   socket:
     foreground: black
-    background: pink
+    background: light_pink
 
   door:
     foreground: black
-    background: pink
+    background: light_pink
 
   block_device:
-    foreground: cyan
+    foreground: light_cyan
+    background: darkergray
 
   character_device:
-    foreground: pink
+    foreground: light_pink
+    background: darkergray
 
   broken_symlink:
     foreground: black
@@ -76,11 +73,12 @@ core:
   sticky: {}
 
   executable_file:
-    foreground: red
+    foreground: light_red
 
 text:
   special:
-    foreground: light_green
+    foreground: background_color
+    background: yellow
 
   todo:
     font-style: bold
@@ -108,16 +106,18 @@ programming:
       foreground: green
 
 media:
-  foreground: light_pink
+  foreground: pink
 
 office:
-  foreground: red
-
-archives:
   foreground: cyan
 
+archives:
+  foreground: light_cyan
+  font-style: underline
+
 executable:
-  foreground: red
+  foreground: light_red
+  font-style: bold
 
 unimportant:
   foreground: darkgray

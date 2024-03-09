@@ -1,28 +1,22 @@
 colors:
-  # Original "snazzy" theme by sindresorhus
-  # https://github.com/sindresorhus/hyper-snazzy
-  background_color: '282a36'
-  white: 'eff0eb'
-  red: 'ff5c57'
-  green: '5af78e'
-  yellow: 'f3f99d'
-  blue: '57c7ff'
-  pink: 'ff6ac1'
-  cyan: '9aedfe'
+  # Theme colors
+  background_color: '1a1a1a'
+  purple: "ae81ff"
+  khaki: "e6db74"
+  pink: "f92672"
+  cyan: "66d9ef"
+  green: "a6e22e"
+  orange: "fd971f"
 
-  rose: 'f9b79d'
-
-  light_red: 'ff8b89'
-  light_green: 'a5ffc3'
-  light_yellow: 'f9fccf'
-  light_blue: 'a3e1ff'
-  light_pink: 'ffb4df'
-  light_cyan: 'd4f7fe'
-
-  black: '000000'
-  gray: '999999'
-  darkgray: '666666'
-  darkergray: '333333'
+  # Others
+  white: "ffffff"
+  black: "000000"
+  red: "ff4a44"
+  gray: "b6b6b6"
+  dimgray: "7a7070"
+  gold: "e2d139"
+  springgreen: "00ff87"
+  darkgray: "333333"
 
 core:
   normal_text: {}
@@ -30,7 +24,7 @@ core:
   reset_to_normal: {}
 
   directory:
-    foreground: blue
+    foreground: cyan
 
   symlink:
     foreground: pink
@@ -39,7 +33,7 @@ core:
 
   fifo:
     foreground: black
-    background: blue
+    background: cyan
 
   socket:
     foreground: black
@@ -51,9 +45,11 @@ core:
 
   block_device:
     foreground: cyan
+    background: darkgray
 
   character_device:
     foreground: pink
+    background: darkgray
 
   broken_symlink:
     foreground: black
@@ -76,11 +72,13 @@ core:
   sticky: {}
 
   executable_file:
-    foreground: red
+    foreground: pink
+    font-style: bold
 
 text:
   special:
-    foreground: light_green
+    foreground: black
+    background: khaki
 
   todo:
     font-style: bold
@@ -89,35 +87,37 @@ text:
     foreground: gray
 
   configuration:
-    foreground: yellow
+    foreground: green
 
   other:
-    foreground: yellow
+    foreground: gold
 
 markup:
-  foreground: yellow
+  foreground: gold
 
 programming:
   source:
-    foreground: green
+    foreground: springgreen
 
   tooling:
-    foreground: light_green
+    foreground: green
 
     continuous-integration:
-      foreground: green
+      foreground: khaki
 
 media:
-  foreground: light_pink
+  foreground: orange
 
 office:
-  foreground: red
+  foreground: khaki
 
 archives:
-  foreground: cyan
+  foreground: pink
+  font-style: underline
 
 executable:
-  foreground: red
+  foreground: pink
+  font-style: bold
 
 unimportant:
-  foreground: darkgray
+  foreground: dimgray

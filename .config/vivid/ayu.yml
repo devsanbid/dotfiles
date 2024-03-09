@@ -1,28 +1,19 @@
 colors:
-  # Original "snazzy" theme by sindresorhus
-  # https://github.com/sindresorhus/hyper-snazzy
-  background_color: '282a36'
-  white: 'eff0eb'
-  red: 'ff5c57'
-  green: '5af78e'
-  yellow: 'f3f99d'
-  blue: '57c7ff'
-  pink: 'ff6ac1'
-  cyan: '9aedfe'
+  # Based on original "ayu" theme:
+  # https://github.com/ayu-theme/ayu-colors
+  background_color: 'fafafa'
+  black: '000'
+  apricot: 'ed9366'
+  green: '318866'
+  sienna: 'ed666a'
+  blue: '1b7dc4'
+  pink: 'f07171'
+  lime: '86b300'
 
-  rose: 'f9b79d'
+  light_green: '9ae845'
 
-  light_red: 'ff8b89'
-  light_green: 'a5ffc3'
-  light_yellow: 'f9fccf'
-  light_blue: 'a3e1ff'
-  light_pink: 'ffb4df'
-  light_cyan: 'd4f7fe'
-
-  black: '000000'
-  gray: '999999'
-  darkgray: '666666'
-  darkergray: '333333'
+  gray: '666666'
+  lightgray: 'aaa'
 
 core:
   normal_text: {}
@@ -50,18 +41,20 @@ core:
     background: pink
 
   block_device:
-    foreground: cyan
+    foreground: black
+    background: sienna
 
   character_device:
-    foreground: pink
+    foreground: black
+    background: lime
 
   broken_symlink:
     foreground: black
-    background: red
+    background: sienna
 
   missing_symlink_target:
     foreground: black
-    background: red
+    background: sienna
 
   setuid: {}
 
@@ -76,11 +69,13 @@ core:
   sticky: {}
 
   executable_file:
-    foreground: red
+    foreground: sienna
+    font-style: bold
 
 text:
   special:
-    foreground: light_green
+    foreground: black
+    background: apricot
 
   todo:
     font-style: bold
@@ -89,13 +84,13 @@ text:
     foreground: gray
 
   configuration:
-    foreground: yellow
+    foreground: apricot
 
   other:
-    foreground: yellow
+    foreground: apricot
 
 markup:
-  foreground: yellow
+  foreground: apricot
 
 programming:
   source:
@@ -108,16 +103,18 @@ programming:
       foreground: green
 
 media:
-  foreground: light_pink
+  foreground: pink
 
 office:
-  foreground: red
+  foreground: sienna
 
 archives:
-  foreground: cyan
+  foreground: lime
+  font-style: underline
 
 executable:
-  foreground: red
+  foreground: sienna
+  font-style: bold
 
 unimportant:
-  foreground: darkgray
+  foreground: lightgray

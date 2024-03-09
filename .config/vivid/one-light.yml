@@ -1,23 +1,12 @@
 colors:
-  # Original "snazzy" theme by sindresorhus
-  # https://github.com/sindresorhus/hyper-snazzy
-  background_color: '282a36'
-  white: 'eff0eb'
-  red: 'ff5c57'
-  green: '5af78e'
-  yellow: 'f3f99d'
-  blue: '57c7ff'
+  background_color: 'fafafa'
+  white: 'a0a1a7'
+  red: 'e45649'
+  green: '50a14f'
+  yellow: 'c18401'
+  blue: '4078f2'
   pink: 'ff6ac1'
-  cyan: '9aedfe'
-
-  rose: 'f9b79d'
-
-  light_red: 'ff8b89'
-  light_green: 'a5ffc3'
-  light_yellow: 'f9fccf'
-  light_blue: 'a3e1ff'
-  light_pink: 'ffb4df'
-  light_cyan: 'd4f7fe'
+  cyan: '0184bc'
 
   black: '000000'
   gray: '999999'
@@ -51,9 +40,11 @@ core:
 
   block_device:
     foreground: cyan
+    background: darkergray
 
   character_device:
     foreground: pink
+    background: darkergray
 
   broken_symlink:
     foreground: black
@@ -77,10 +68,12 @@ core:
 
   executable_file:
     foreground: red
+    font-style: bold
 
 text:
   special:
-    foreground: light_green
+    foreground: background_color
+    background: yellow
 
   todo:
     font-style: bold
@@ -102,22 +95,24 @@ programming:
     foreground: green
 
   tooling:
-    foreground: light_green
+    foreground: green
 
     continuous-integration:
       foreground: green
 
 media:
-  foreground: light_pink
+  foreground: pink
 
 office:
   foreground: red
 
 archives:
   foreground: cyan
+  font-style: underline
 
 executable:
   foreground: red
+  font-style: bold
 
 unimportant:
   foreground: darkgray
