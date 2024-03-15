@@ -7,26 +7,26 @@
 </defs>
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
-<g fill="#f67400" fill-opacity="1" stroke="none" transform="matrix(0.0552954,0,0,-0.0552959,0.290102,50.7425)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="#6a58f0" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-93.1818,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="nonzero" d="M446.869,13.4278 C696.568,13.4278 898.988,215.847 898.988,465.538 C898.988,715.235 696.568,917.654 446.869,917.654 C197.173,917.654 -5.24642,715.235 -5.24642,465.538 C-5.24642,215.847 197.173,13.4278 446.869,13.4278 "/>
+<circle cx="52" cy="1110.52" r="11"/>
 </g>
 
-<g fill="#eff0f1" fill-opacity="1" stroke="none" transform="matrix(0.0552954,0,0,-0.0552959,0.290102,50.7425)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="#ffcd00" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-93.1818,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="evenodd" d="M190.388,465.536 L703.354,465.536"/>
+<circle cx="52" cy="1110.52" r="11"/>
 </g>
 
-<g fill="none" stroke="#eff0f1" stroke-opacity="1" stroke-width="120" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="4" transform="matrix(0.0552954,0,0,-0.0552959,0.290102,50.7425)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-93.1818,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="evenodd" d="M190.388,465.536 L703.354,465.536"/>
+<path vector-effect="none" fill-rule="nonzero" d="M51.5,1109.52 L50.5,1109.52 L46.5,1109.52 L46.5,1111.52 L50.5,1111.52 L51.5,1111.52 L52.5,1111.52 L53.5,1111.52 L57.5,1111.52 L57.5,1109.52 L53.5,1109.52 L52.5,1109.52 L51.5,1109.52"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 </g>

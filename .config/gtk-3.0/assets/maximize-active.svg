@@ -7,20 +7,26 @@
 </defs>
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
-<g fill="#27ae60" fill-opacity="1" stroke="none" transform="matrix(0.0552956,0,0,-0.0552959,-4.28815,49.1733)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="#6a58f0" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-90.9091,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="nonzero" d="M529.669,-14.9514 C779.361,-14.9514 981.78,187.467 981.78,437.161 C981.78,686.857 779.361,889.275 529.669,889.275 C279.969,889.275 77.5495,686.857 77.5495,437.161 C77.5495,187.467 279.969,-14.9514 529.669,-14.9514 "/>
+<circle cx="51" cy="1110.52" r="11"/>
 </g>
 
-<g fill="#eff0f1" fill-opacity="1" stroke="none" transform="matrix(0.0578019,0,0,-0.0573117,-0.0281215,49.7527)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="#318c9b" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-90.9091,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="nonzero" d="M317.364,650.001 L584.563,650.001 C620.142,650.001 649.255,620.888 649.255,585.306 L649.255,318.11 L317.364,650.001 M549.688,213.79 L281.435,213.79 C245.852,213.79 216.743,242.899 216.743,278.481 L216.743,546.735 L549.688,213.79"/>
+<circle cx="51" cy="1110.52" r="11"/>
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-90.9091,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="nonzero" d="M50.1316,1105.02 L50.1316,1109.65 L45.5,1109.65 L45.5,1111.39 L50.1316,1111.39 L50.1316,1116.02 L51.8684,1116.02 L51.8684,1111.39 L56.5,1111.39 L56.5,1109.65 L51.8684,1109.65 L51.8684,1105.02 L50.1316,1105.02"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 </g>

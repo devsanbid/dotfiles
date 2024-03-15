@@ -7,14 +7,20 @@
 </defs>
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
-<g fill="#27ae60" fill-opacity="1" stroke="none" transform="matrix(0.0552959,0,0,-0.0552956,-1.62543,49.039)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="#434d70" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,79.5455,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="nonzero" d="M481.512,-17.3793 C731.203,-17.3793 933.621,185.04 933.621,434.736 C933.621,684.432 731.203,886.851 481.512,886.851 C231.814,886.851 29.3952,684.432 29.3952,434.736 C29.3952,185.04 231.814,-17.3793 481.512,-17.3793 "/>
+<circle cx="-24" cy="1110.52" r="11"/>
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,79.5455,-2498.91)"
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="nonzero" d="M-24.8684,1105.02 L-24.8684,1109.65 L-29.5,1109.65 L-29.5,1111.39 L-24.8684,1111.39 L-24.8684,1116.02 L-23.1316,1116.02 L-23.1316,1111.39 L-18.5,1111.39 L-18.5,1109.65 L-23.1316,1109.65 L-23.1316,1105.02 L-24.8684,1105.02"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
 >
 </g>
 </g>
