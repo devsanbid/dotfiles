@@ -16,6 +16,7 @@ keymap("n", "<leader>jm", ":NodeAction<cr>")
 keymap("n", "<leader>jj", ":TSJToggle<cr>")
 keymap("x", "p", [["_dP]])
 
+keymap("n", "<Leader>dd", ":lua require('neogen').generate()<CR>", opts)
 keymap("n", "<C-z>", "<cmd>cnext<CR>zz")
 keymap("n", "<C-S-z>", "<cmd>cprev<CR>zz")
 keymap("n", "zz", "<cmd>QuickFix<CR>")

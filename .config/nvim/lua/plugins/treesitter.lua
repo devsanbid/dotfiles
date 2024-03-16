@@ -1,41 +1,67 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  event = { "BufReadPre", "BufNewFile" },
+  'nvim-treesitter/nvim-treesitter',
+  build = ':TSUpdate',
+  event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
+    'nvim-treesitter/nvim-treesitter-textobjects',
   },
   config = function()
-    local configs = require("nvim-treesitter.configs")
-    configs.setup({
+    local configs = require 'nvim-treesitter.configs'
+    configs.setup {
       ensure_installed = {
-        "tsx",
-        "javascript",
-        "typescript",
-        "fish",
-        "bash",
-        "css",
-        "json",
-        "html",
-        "prisma",
-        "lua",
-        "dockerfile",
+        'tsx',
+        'javascript',
+        'typescript',
+        'fish',
+        'bash',
+        'css',
+        'json',
+        'hyprlang',
+        'jsonc',
+        'vim',
+        'vimdoc',
+        'yaml',
+        'query',
+        'regex',
+        'toml',
+        'rasi',
+        'luadoc',
+        'jsdoc',
+        'html',
+        'prisma',
+        'lua',
+        'dockerfile',
+      },
+      lsp_interop = {
+        enable = true,
+        border = 'rounded',
+        peek_definition_code = {},
       },
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
+          init_selection = '<M-space>',
+          node_incremental = '<M-space>',
           scope_incremental = false,
-          node_decremental = "<bs>",
+          node_decremental = '<M-bs>',
         },
       },
+      auto_install = true,
       sync_install = true,
       highlight = { enable = true },
       indent = { enable = true },
       autotag = {
         enable = true,
       },
-    })
+    }
+    vim.filetype.add {
+      extension = { rasi = 'rasi' },
+      pattern = {
+        ['.*/waybar/config'] = 'jsonc',
+        ['.*/mako/config'] = 'dosini',
+        ['.*/kitty/*.conf'] = 'bash',
+        ['.*/hypr/.*%.conf'] = 'hyprlang',
+      },
+    }
   end,
 }

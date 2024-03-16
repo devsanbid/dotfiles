@@ -49,8 +49,8 @@ bind -m default gp "cd ~/Desktop/project/pratice &> /dev/null"
 bind -m default gw "cd ~/Desktop/project/working &> /dev/null"
 bind -m default \x20\x20 'cd ~ && fzf | xargs nvim {} && clear'
 bind -m default \x20r 'source ~/.config/fish/config.fish'
-bind -m default \x20gs 'cd ~/dotfiles && git add --all && git commit -a -m \"$(random)\"'
-bind -m default \x20gp 'cd ~/dotfiles && git push'
+bind -m default \x20gs 'cd ~/.dotfiles && git add --all && git commit -a -m \"$(random)\"'
+bind -m default \x20gp 'cd ~/.dotfiles && git push'
 
 alias ivm 'vim'
 
