@@ -28,8 +28,6 @@ return {
     },
     skip_confirm_for_simple_edits = true,
     sort = {
-      { 'size', 'desc' },
-      { 'name', 'asc' },
     },
     lsp_file_methods = { autosave_changes = true },
     experimental_watch_for_changes = true,
@@ -52,7 +50,7 @@ return {
       ['g\\'] = 'actions.toggle_trash',
     },
     view_options = {
-      show_hidden = false,
+      show_hidden = true,
       is_hidden_file = function(name, bufnr)
         return vim.startswith(name, '.')
       end,

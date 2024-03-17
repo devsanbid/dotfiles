@@ -1,7 +1,7 @@
 return {
-  "nvim-lualine/lualine.nvim",
+  'nvim-lualine/lualine.nvim',
   config = function()
-    require("lualine").setup({
+    require('lualine').setup {
       icons_enabled = false,
       sections = {
         lualine_c = {},
@@ -10,15 +10,9 @@ return {
         lualine_a = {},
         lualine_z = {},
         lualine_b = {
-          {
-            function()
-              local key = require("grapple").name_or_index ()
-              return "  [" .. key .. "]"
-            end,
-            cond = require("grapple").exists,
-          },
+          'grapple',
         },
       },
-    })
+    }
   end,
 }
