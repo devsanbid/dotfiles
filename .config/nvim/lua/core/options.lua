@@ -31,7 +31,7 @@ opt.incsearch = true
 opt.termguicolors = true
 vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
 opt.scrolloff = 16
-opt.signcolumn = "no"
+opt.signcolumn = "yes"
 opt.isfname:append("@-@")
 opt.pumheight = 8
 opt.pumwidth = 5
