@@ -4,7 +4,9 @@ return {
     require('lualine').setup {
       icons_enabled = false,
       sections = {
-        lualine_c = {},
+        lualine_c = {
+          "filename"
+        },
         lualine_x = {},
         lualine_y = {},
         lualine_a = {},
