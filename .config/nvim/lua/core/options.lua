@@ -1,5 +1,6 @@
 local opt = vim.opt
 local global = vim.g
+global.maplocalleader = ";"
 opt.guicursor = ""
 vim.g.completion_abbr_length = 10 -- completion item (left)
 vim.g.completion_menu_length = 10 -- extra info for completion item (right)
@@ -31,7 +32,7 @@ opt.incsearch = true
 opt.termguicolors = true
 vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
 opt.scrolloff = 16
-opt.signcolumn = "yes"
+opt.signcolumn = "no"
 opt.isfname:append("@-@")
 opt.pumheight = 8
 opt.pumwidth = 5
