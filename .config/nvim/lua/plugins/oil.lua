@@ -1,7 +1,7 @@
 return {
   'stevearc/oil.nvim',
   opts = {
-    prompt_save_on_select_new_entry = true,
+    prompt_save_on_select_new_entry = false,
     win_options = {
       wrap = false,
       signcolumn = 'no',
@@ -27,8 +27,7 @@ return {
       end,
     },
     skip_confirm_for_simple_edits = true,
-    sort = {
-    },
+    sort = {},
     lsp_file_methods = { autosave_changes = true },
     experimental_watch_for_changes = true,
     keymaps = {
@@ -57,9 +56,10 @@ return {
       is_always_hidden = function(name, bufnr)
         return vim.startswith(name, 'node_modules')
       end,
+      natural_order = true,
       sort = {
-        { 'type', 'asc' },
-        { 'name', 'asc' },
+        { 'type', 'desc' },
+        { 'name', 'desc' },
       },
     },
   },

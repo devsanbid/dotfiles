@@ -4,11 +4,11 @@ return {
     require('lualine').setup {
       icons_enabled = false,
       sections = {
-        lualine_c = {
-          "filename"
-        },
+        lualine_c = {},
         lualine_x = {},
-        lualine_y = {},
+        lualine_y = {
+          'filename',
+        },
         lualine_a = {},
         lualine_z = {},
         lualine_b = {
