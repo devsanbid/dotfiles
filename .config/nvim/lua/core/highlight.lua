@@ -3,7 +3,6 @@ local hi = vim.api.nvim_set_hl
 hi(0, 'NeoTreeSignColumn', { bg = '#1e1e2e' })
 hi(0, '@type.builtin', {  fg = '#FF7276' })
 hi(0, '@variable.builtin', { fg = '#FF7276' })
--- hi(0, '@comment.documentation.javascript', { bold = false, fg='#FF7276' })
 
 hi(0, 'MatchParen', { bg = 'none', fg = 'yellow' })
 hi(0, 'Visual', { bg = '#1e1e2e' })

@@ -4,6 +4,7 @@ vim.g.mapleader = " "
 
 --remove keymap default i hate that
 keymap("v", "<S-j>", "<Nop>")
+keymap("n", "<S-j>", "<Nop>")
 
 -- navigation
 keymap("i", "jk", "<ESC>")
@@ -11,12 +12,12 @@ keymap("i", "JK", "<ESC>")
 keymap("i", "kj", "<ESC>")
 keymap("i", "jj", "<ESC>")
 keymap("i", "Jk", "<ESC>")
+keymap("i", "Jk", "<ESC>")
+
 
 keymap("n", "<leader>jm", ":NodeAction<cr>")
 keymap("n", "<leader>jj", ":TSJToggle<cr>")
-keymap("x", "p", [["_dP]])
 
-keymap("n", "<Leader>dd", ":lua require('neogen').generate()<CR>", opts)
 keymap("n", "<C-z>", "<cmd>cnext<CR>zz")
 keymap("n", "<C-S-z>", "<cmd>cprev<CR>zz")
 keymap("n", "zz", "<cmd>QuickFix<CR>")
@@ -68,30 +69,11 @@ keymap("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
 --telescope
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
-keymap("n", "<leader><leader>", ":Telescope find_files<cr>", opts)
+-- keymap("n", "<leader><leader>", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fH", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope highlights<cr>", opts)
-
-keymap("n", "<leader>ac", function()
-  vim.ui.input({ prompt = "Enter your commit message" }, function(input)
-    vim.cmd("Git add .")
-    local commit_message = "Git commit -m '" .. input .. "' ."
-    vim.cmd(commit_message)
-    print("Done commit")
-  end)
-end)
-
-keymap("n", "<leader>ap", function()
-  print("pushing.....")
-  vim.cmd.Git("push")
-end)
-
-keymap("n", "<leader>aP", function()
-  print("pulling.....")
-  vim.cmd.Git("pull")
-end)
 
 keymap("n", "<leader>lf", function()
   vim.lsp.buf.format()

@@ -29,7 +29,7 @@ opt.virtualedit = "block"
 opt.hlsearch = false
 opt.incsearch = true
 opt.termguicolors = true
-opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
 opt.scrolloff = 16
 opt.signcolumn = "no"
 opt.isfname:append("@-@")
