@@ -152,7 +152,7 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      luasnip.lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert {
@@ -189,8 +189,7 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'buffer' }, -- text within the current buffer
     { name = 'fish' },
-
-    { name = 'path' }, -- file system paths
+    { name = 'path' },   -- file system paths
     {
       name = 'env',
       -- Defaults
@@ -211,6 +210,12 @@ cmp.setup {
     },
   },
 }
+
+require('cmp').setup.filetype({ 'dap-repl', 'dapui_watches', 'dapui_hover' }, {
+  sources = {
+    { name = 'dap' },
+  },
+})
 
 -- `/` cmdline setup.
 cmp.setup.cmdline('/', {
@@ -234,3 +239,4 @@ cmp.setup.cmdline(':', {
     },
   }),
 })
+
