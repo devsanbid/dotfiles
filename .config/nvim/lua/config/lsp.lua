@@ -107,6 +107,7 @@ if not cmp_status then
   return
 end
 
+local cmp_ultisnips_mappings = require 'cmp_nvim_ultisnips.mappings'
 -- import luasnip plugin safely
 local luasnip_status, luasnip = pcall(require, 'luasnip')
 if not luasnip_status then
@@ -151,42 +152,35 @@ cmp.setup {
     end,
   },
   snippet = {
+    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      vim.fn['UltiSnips#Anon'](args.body) -- For `ultisnips` users.
     end,
   },
-  mapping = cmp.mapping.preset.insert {
+  mapping = {
+    ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+    ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+    ['<C-y>'] = cmp.config.disable,                    -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+    ['<C-e>'] = cmp.mapping { i = cmp.mapping.abort(), c = cmp.mapping.close() },
+    ['<CR>'] = cmp.mapping.confirm { select = false }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        -- You could replace select_next_item() with
-        -- confirm({ select = true }) to get VS Code autocompletion behavior
-        cmp.select_next_item()
-        -- You could replace the expand_or_jumpable() calls
-        -- with expand_or_locally_jumpable()
-        -- this way you will only jump inside the snippet region
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
+      cmp_ultisnips_mappings.compose { 'select_next_item', 'jump_forwards' } (fallback)
     end, { 'i', 's' }),
-    ['<CR>'] = cmp.mapping.confirm { select = true },
     ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
+      cmp_ultisnips_mappings.compose { 'select_prev_item', 'jump_backwards' } (fallback)
     end, { 'i', 's' }),
+    ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's', 'c' }),
+    ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's', 'c' }),
   },
   sources = cmp.config.sources {
     { name = 'nvim_lsp',  priority = 1000 }, -- LSP
     { name = 'nvim_lua' },
     { name = 'cmp-tw2css' },
     { name = 'neorg' },
-    { name = 'luasnip' },
+    -- { name = 'luasnip' }, -- For luasnip users.
+    { name = 'ultisnips' },
     { name = 'buffer' }, -- text within the current buffer
     { name = 'fish' },
     { name = 'path' },   -- file system paths
@@ -239,4 +233,3 @@ cmp.setup.cmdline(':', {
     },
   }),
 })
-
