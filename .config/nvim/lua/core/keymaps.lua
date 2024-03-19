@@ -36,12 +36,24 @@ keymap('n', '<leader>tp', function()
   require('trouble').previous { skip_groups = true, jump = true }
 end)
 
+-- select all
+keymap("n", "<C-a>", "<esc>ggVG<CR>")
+
+
+-- split buffer
+keymap("n", "ss", ":split<Return>")
+keymap("n", "sv", ":vsplit<Return><C-w>w")
+
+
 keymap({ 'n', 'x' }, 'j', 'gj', opts)
 keymap({ 'n', 'x' }, 'k', 'gk', opts)
 
-keymap('n', '*', '*zz', opts)
 keymap('n', 'g*', 'g*zz', opts)
 keymap('n', 'g#', 'g#z', opts)
+
+vim.keymap.set("n", "*", ":keepjumps normal! mi*`i<CR>") -- " Use * to add w/out jumping
+vim.keymap.set('n', 'gx', ":silent! execute '!open ' . shellescape(expand('<cfile>'), 1)<CR>")
+
 
 -- take screenshot
 keymap({ 'n', 'v' }, '<leader>ss', ':Silicon<cr>')

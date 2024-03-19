@@ -1,52 +1,15 @@
 return {
   'mfussenegger/nvim-dap',
   dependencies = {
-    'leoluz/nvim-dap-go',
     'rcarriga/nvim-dap-ui',
-    { 'mxsdev/nvim-dap-vscode-js' },
-    {
-      "microsoft/vscode-js-debug",
-      lazy = true,
-      build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
-    }
   },
   config = function()
     require('dapui').setup()
-    require('dap-go').setup()
-
-    require('dap-vscode-js').setup {
-      debugger_path = vim.fn.stdpath 'data' .. '/lazy/vscode-js-debug',
-      adapters = { 'pwa-chrome', 'pwa-node' },
+    require('mason-nvim-dap').setup {
+      ensure_installed = { 'python', 'delve', 'js', 'firefox', 'bash', 'stylua', 'node2' },
+      automatic_installation = true,
+      handlers = {}, -- sets up dap in the predefined manner
     }
-
-    local js_based_languages = { 'typescript', 'javascript', 'typescriptreact' }
-
-    for _, language in ipairs(js_based_languages) do
-      require('dap').configurations[language] = {
-        {
-          type = 'pwa-node',
-          request = 'launch',
-          name = 'Launch file',
-          program = '${file}',
-          cwd = '${workspaceFolder}',
-        },
-        {
-          type = 'pwa-node',
-          request = 'attach',
-          name = 'Attach',
-          processId = require('dap.utils').pick_process,
-          cwd = '${workspaceFolder}',
-        },
-        {
-          type = 'pwa-chrome',
-          request = 'launch',
-          name = 'Start Chrome with "localhost"',
-          url = 'http://localhost:3000',
-          webRoot = '${workspaceFolder}',
-          userDataDir = '${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir',
-        },
-      }
-    end
 
     local dap, dapui = require 'dap', require 'dapui'
 
@@ -70,5 +33,6 @@ return {
     vim.keymap.set('n', '<Leader>dn', ':DapStepOver<CR>')
     vim.keymap.set('n', '<Leader>do', ':DapStepOut<CR>')
     vim.keymap.set('n', '<Leader>di', ':DapStepInto<CR>')
+    vim.keymap.set({ 'n', 'v' }, '<M-K>', require('dapui').eval)
   end,
 }

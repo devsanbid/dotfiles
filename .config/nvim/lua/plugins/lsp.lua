@@ -3,6 +3,7 @@ return {
     'williamboman/mason.nvim',
     dependencies = {
       'williamboman/mason-lspconfig.nvim',
+      'jay-babu/mason-nvim-dap.nvim',
     },
     config = function()
       require('mason').setup()
@@ -50,5 +51,4 @@ return {
       { 'hrsh7th/cmp-nvim-lsp' },
     },
   },
-
 }

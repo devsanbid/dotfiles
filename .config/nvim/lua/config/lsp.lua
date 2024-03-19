@@ -141,6 +141,7 @@ cmp.setup {
 }
 
 cmp.setup {
+  preselect = cmp.PreselectMode.None, -- Don't automatically chose from a list
   formatting = {
     fields = { 'abbr', 'kind' },
     format = function(_, vim_item)
@@ -152,7 +153,7 @@ cmp.setup {
   },
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      vim.fn['UltiSnips#Anon'](args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert {
@@ -189,7 +190,9 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'buffer' }, -- text within the current buffer
     { name = 'fish' },
-    { name = 'path' },   -- file system paths
+    { name = 'ultisnips', max_item_count = 3 },
+
+    { name = 'path' }, -- file system paths
     {
       name = 'env',
       -- Defaults

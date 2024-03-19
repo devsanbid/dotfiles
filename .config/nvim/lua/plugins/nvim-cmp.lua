@@ -2,17 +2,23 @@ return {
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = {
-      { 'L3MON4D3/LuaSnip' },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'rafamadriz/friendly-snippets' }, -- useful snippets
-      { 'SirVer/ultisnips' },
-      { 'quangnguyen30192/cmp-nvim-ultisnips' },
+      'saadparwaiz1/cmp_luasnip',
+      'rafamadriz/friendly-snippets', -- useful snippets
+      'SirVer/ultisnips',
+      'quangnguyen30192/cmp-nvim-ultisnips',
       'hrsh7th/cmp-cmdline',
       { 'mtoohey31/cmp-fish', ft = 'fish' },
       'rcarriga/cmp-dap',
       'jcha0713/cmp-tw2css',
       'SergioRibera/cmp-dotenv',
+      'SirVer/ultisnips',
       'hrsh7th/cmp-nvim-lua',
+      {
+        'quangnguyen30192/cmp-nvim-ultisnips',
+        config = function()
+          vim.cmd 'let g:UltiSnipsJumpForwardTrigger="<c-e>"'
+        end,
+      },
     },
   },
 
