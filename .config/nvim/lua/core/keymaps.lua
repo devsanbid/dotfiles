@@ -73,6 +73,8 @@ keymap('n', '<leader>fw', ':Telescope live_grep<cr>', opts)
 keymap('n', '<leader>fH', ':Telescope help_tags<cr>', opts)
 keymap('n', '<leader>fr', ':Telescope oldfiles<cr>', opts)
 keymap('n', '<leader>fh', ':Telescope highlights<cr>', opts)
+keymap('n', '<leader>fp', ':Telescope yank_history<cr>')
+
 
 keymap('n', '<leader>lf', function()
   vim.lsp.buf.format()
