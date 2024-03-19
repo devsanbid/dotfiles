@@ -11,14 +11,7 @@ return {
       'rcarriga/cmp-dap',
       'jcha0713/cmp-tw2css',
       'SergioRibera/cmp-dotenv',
-      'SirVer/ultisnips',
       'hrsh7th/cmp-nvim-lua',
-      {
-        'quangnguyen30192/cmp-nvim-ultisnips',
-        config = function()
-          vim.cmd 'let g:UltiSnipsJumpForwardTrigger="<c-e>"'
-        end,
-      },
     },
   },
 
