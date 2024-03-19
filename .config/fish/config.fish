@@ -19,7 +19,6 @@ bind \cf "tmux-sessionizer"
 
 fish_vi_key_bindings
 
-
 set fish_cursor_default block
 set fish_autosuggestion_enabled 0
 zoxide init fish | source

@@ -87,6 +87,7 @@ keymap('n', '<leader>li', ':LspInfo<cr>', opts)
 keymap('n', '<leader>lI', ':LspInstall<cr>', opts)
 keymap('n', '<leader>lm', ':Mason<cr>', opts)
 
+
 --explore
 -- keymap("n", "<leader>e", ":Neotree toggle reveal_force_cwd<cr>", opts)
 

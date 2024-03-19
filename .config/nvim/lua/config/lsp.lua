@@ -14,6 +14,18 @@ lspconfig.tsserver.setup {
 lspconfig.lua_ls.setup {
   settings = {
     Lua = {
+      diagnostics = {
+        enable = true,
+        globals = {
+          'vim',
+          'describe',
+          'it',
+          'before_each',
+          'after_each',
+          'teardown',
+          'pending',
+        },
+      },
       runtime = { version = 'LuaJIT' },
       workspace = {
         checkThirdParty = false,
@@ -34,6 +46,7 @@ vim.diagnostic.config {
     spacing = 4,
     source = 'if_many',
     prefix = '●',
+    update_in_insert = true,
   },
   severity_sort = true,
 }
@@ -118,7 +131,7 @@ cmp.setup {
     if buftype == 'prompt' or buftype == 'acwrite' then
       return false
     end
-    -- keep command mode completion enabled when cursor is in a comment
+    -- keep command mode completion disable when cursor is in a comment
     if vim.api.nvim_get_mode().mode == 'c' then
       return true
     else
@@ -169,11 +182,60 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = cmp.config.sources {
-    { name = 'nvim_lsp', priority = 1000 }, -- LSP
+    { name = 'nvim_lsp',  priority = 1000 }, -- LSP
+    { name = 'nvim_lua' },
+    { name = 'cmp-tw2css' },
     { name = 'neorg' },
-    { name = 'luasnip' },                   -- snippets
-    --  { name = 'ultisnips' },                 -- For ultisnips users.
-    { name = 'buffer' },                    -- text within the current buffer
-    { name = 'path' },                      -- file system paths
+    { name = 'luasnip' },
+    { name = 'buffer' }, -- text within the current buffer
+    { name = 'fish' },
+    { name = 'path' },   -- file system paths
+    {
+      name = 'env',
+      -- Defaults
+      option = {
+        path = '.',
+        load_shell = false,
+        item_kind = cmp.lsp.CompletionItemKind.Variable,
+        eval_on_confirm = false,
+        show_documentation = false,
+        show_content_on_docs = false,
+        documentation_kind = 'markdown',
+        dotenv_environment = '.en*',
+        file_priority = function(a, b)
+          -- Prioritizing local files
+          return a:upper() < b:upper()
+        end,
+      },
+    },
   },
 }
+
+require('cmp').setup.filetype({ 'dap-repl', 'dapui_watches', 'dapui_hover' }, {
+  sources = {
+    { name = 'dap' },
+  },
+})
+
+-- `/` cmdline setup.
+cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' },
+  },
+})
+
+-- `:` cmdline setup.
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' },
+  }, {
+    {
+      name = 'cmdline',
+      option = {
+        ignore_cmds = { 'Man', '!' },
+      },
+    },
+  }),
+})
