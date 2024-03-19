@@ -7,6 +7,7 @@ return {
       'rafamadriz/friendly-snippets', -- useful snippets
       'nvim-treesitter/nvim-treesitter',
       'SirVer/ultisnips',
+      'mlaursen/vim-react-snippets',
       'quangnguyen30192/cmp-nvim-ultisnips',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
