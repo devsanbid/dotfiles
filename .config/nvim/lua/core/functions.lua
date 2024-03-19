@@ -9,6 +9,17 @@ function M.basename(str)
   return name
 end
 
+function M.jump_to_line(search_text)
+  local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+  for i, line in ipairs(lines) do
+    if string.find(line, search_text, 1, true) then
+      vim.fn.cursor { i, 1 }
+      return true
+    end
+  end
+  return false
+end
+
 function M.copy_file_name()
   local buf_name = vim.api.nvim_buf_get_name(0)
   local base = M.basename(buf_name)
@@ -29,6 +40,11 @@ function M.get_buffer_text(bufnr)
   local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
   local text = table.concat(lines, '\n')
   return text
+end
+
+function M.dirname(str)
+  local name = string.gsub(str, '(.*/)(.*)', '%1')
+  return name
 end
 
 function M.open_url(url)
