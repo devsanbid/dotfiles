@@ -1,6 +1,7 @@
 return {
   'nvim-neorg/neorg',
   build = ':Neorg sync-parsers',
+  enabled = false,
   ft = 'norg',
   cmd = 'Neorg',
   lazy = false, -- specify lazy = false because some lazy.nvim distributions set lazy = true by default
@@ -16,7 +17,7 @@ return {
         ['core.keybinds'] = {
           config = {
             default_keybinds = true,
-            neorg_leader = ";"
+            neorg_leader = ';',
           },
         },
         ['core.looking-glass'] = {},

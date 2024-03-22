@@ -1,7 +1,7 @@
 local hi = vim.api.nvim_set_hl
 
 hi(0, 'NeoTreeSignColumn', { bg = '#1e1e2e' })
-hi(0, '@type.builtin', {  fg = '#FF7276' })
+hi(0, '@type.builtin', { fg = '#FF7276' })
 hi(0, '@variable.builtin', { fg = '#FF7276' })
 
 hi(0, 'MatchParen', { bg = 'none', fg = 'yellow' })
@@ -31,6 +31,7 @@ local transparent_hightlight = {
   'lualine_a_normal',
   'lualine_a_visual',
   'lualine_c_normal',
+  'LspInlayHint',
   'lualine_c_visual',
   'lualine_c_command',
   'lualine_a_command',

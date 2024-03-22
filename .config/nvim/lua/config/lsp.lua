@@ -5,6 +5,28 @@ local lspconfig = require 'lspconfig'
 
 lspconfig.tsserver.setup {
   settings = {
+    javascript = {
+      inlayHints = {
+        includeInlayParameterNameHints = 'all',
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayEnumMemberValueHints = true,
+      },
+    },
+    typescript = {
+      inlayHints = {
+        includeInlayParameterNameHints = 'all',
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayEnumMemberValueHints = true,
+      },
+    },
     documentformatting = false,
     diagnostics = {
       enable = false,
@@ -14,6 +36,7 @@ lspconfig.tsserver.setup {
 lspconfig.lua_ls.setup {
   settings = {
     Lua = {
+      inlayHints = true,
       diagnostics = {
         enable = true,
         globals = {

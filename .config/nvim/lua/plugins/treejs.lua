@@ -1,8 +1,8 @@
 return {
-  "Wansmer/treesj",
-  dependencies = { "nvim-treesitter/nvim-treesitter" },
+  'Wansmer/treesj',
+  dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  events = "InsertEnter",
   config = function()
-    require("treesj").setup({ --[[ your config ]]
-    })
+    require('treesj').setup {}
   end,
 }

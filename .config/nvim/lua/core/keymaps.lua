@@ -37,7 +37,6 @@ keymap('n', '<leader>tp', function()
 end)
 
 -- select all
-keymap("n", "<C-a>", "<esc>ggVG<CR>")
 
 
 -- split buffer
