@@ -6,13 +6,13 @@ vim.g.mapleader = ' '
 keymap('v', '<S-j>', '<Nop>')
 keymap('n', '<S-j>', '<Nop>')
 
--- navigation
-keymap('i', 'jk', '<ESC>')
-keymap('i', 'JK', '<ESC>')
-keymap('i', 'kj', '<ESC>')
-keymap('i', 'jj', '<ESC>')
-keymap('i', 'Jk', '<ESC>')
-keymap('i', 'Jk', '<ESC>')
+-- navigation change for 1 month to use only escape
+-- keymap('i', 'jk', '<ESC>')
+-- keymap('i', 'JK', '<ESC>')
+-- keymap('i', 'kj', '<ESC>')
+-- keymap('i', 'jj', '<ESC>')
+-- keymap('i', 'Jk', '<ESC>')
+-- keymap('i', 'Jk', '<ESC>')
 
 keymap('n', '<leader>jm', ':NodeAction<cr>')
 keymap('n', '<leader>jj', ':TSJToggle<cr>')

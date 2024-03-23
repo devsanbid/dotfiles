@@ -29,10 +29,10 @@ set -g fish_key_bindings fish_vi_key_bindings
 
 set -g fish_escape_delay_ms 100
 
-bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
-bind -M insert kj "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
-bind -M insert KJ "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
-bind -M insert JK "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
+# bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
+# bind -M insert kj "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
+# bind -M insert KJ "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
+# bind -M insert JK "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
 
 
 abbr -a bin bun create-next@latest
@@ -170,7 +170,8 @@ alias ...... 'cd ../../../../..'
 alias ip 'ip -color'
 alias upd 'sudo pacman -Syu --noconfirm'
 alias wget 'wget -c '
-alias lvim 'NVIM_APPNAME=lazynvim nvim'
+alias lvim 'NVIM_APPNAME=nvim_lazy nvim'
+# alias vim 'NVIM_APPNAME=nv_kick nvim'
 alias skf "sk --ansi -i -c 'fd --hidden "{}"'"
 alias skw "sk --ansi -i -c 'rg --color=always --hidden --line-number "{}"'"
 alias vim "nvim"

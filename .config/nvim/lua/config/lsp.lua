@@ -1,68 +1,5 @@
--- Use lsp_zero to manage lsp attachments.
-local lsp_zero = require 'lsp-zero'
-lsp_zero.extend_lspconfig()
 local lspconfig = require 'lspconfig'
 
-lspconfig.tsserver.setup {
-  settings = {
-    javascript = {
-      inlayHints = {
-        includeInlayParameterNameHints = 'all',
-        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true,
-      },
-    },
-    typescript = {
-      inlayHints = {
-        includeInlayParameterNameHints = 'all',
-        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true,
-      },
-    },
-    documentformatting = false,
-    diagnostics = {
-      enable = false,
-    },
-  },
-}
-lspconfig.lua_ls.setup {
-  settings = {
-    Lua = {
-      inlayHints = true,
-      diagnostics = {
-        enable = true,
-        globals = {
-          'vim',
-          'describe',
-          'it',
-          'before_each',
-          'after_each',
-          'teardown',
-          'pending',
-        },
-      },
-      runtime = { version = 'LuaJIT' },
-      workspace = {
-        checkThirdParty = false,
-        library = {
-          '${3rd}/luv/library',
-          unpack(vim.api.nvim_get_runtime_file('', true)),
-        },
-      },
-      completion = {
-        callSnippet = 'Replace',
-      },
-    },
-  },
-}
 vim.diagnostic.config {
   underline = true,
   virtual_text = {
@@ -107,24 +44,7 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
-lsp_zero.on_attach(function(_, bufnr)
-  lsp_zero.default_keymaps { buffer = bufnr }
-end)
 
--- Setup Mason and Mason-Config.
-require('mason').setup {}
-require('mason-lspconfig').setup {
-  handlers = {
-    lsp_zero.default_setup,
-    lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
-    end,
-  },
-}
-
---cmp
--- import nvim-cmp plugin safely
 local cmp_status, cmp = pcall(require, 'cmp')
 if not cmp_status then
   return
@@ -226,15 +146,15 @@ cmp.setup {
   --   ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's', 'c' }),
   -- },
   sources = cmp.config.sources {
-    { name = 'nvim_lsp',  priority = 1000 }, -- LSP
+    { name = 'nvim_lsp', priority = 1000 }, -- LSP
     { name = 'nvim_lua' },
     { name = 'cmp-tw2css' },
     { name = 'neorg' },
     { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' },
-    { name = 'buffer' },  -- text within the current buffer
+    { name = 'buffer' }, -- text within the current buffer
     { name = 'fish' },
-    { name = 'path' },    -- file system paths
+    { name = 'path' }, -- file system paths
     {
       name = 'env',
       -- Defaults
