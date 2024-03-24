@@ -68,8 +68,8 @@ keymap('n', '<leader>q', ':q!<cr>', opts)
 keymap('n', '<M-S-j>', '<C-d>zz')
 keymap('n', '<M-S-k>', '<C-u>zz')
 
-keymap('n', '<Up>', '8k', opts)
-keymap('n', '<Down>', '8j', opts)
+keymap('n', '<M-k>', '8k', opts)
+keymap('n', '<M-j>', '8j', opts)
 
 -- center while searching
 keymap('n', 'n', 'nzzzv')
