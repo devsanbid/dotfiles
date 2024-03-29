@@ -7,20 +7,20 @@
 </defs>
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
-<g fill="#cca400" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-2.27273,-2498.91)"
-font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
+<g fill="#fcfcfc" fill-opacity="1" stroke="none" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
+font-family="Noto Sans" font-size="12" font-weight="400" font-style="normal" 
 >
-<circle cx="12" cy="1110.52" r="11"/>
+<circle cx="9" cy="9" r="9"/>
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(2.27273,0,0,2.27273,-2.27273,-2498.91)"
-font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
+<g fill="none" stroke="#31363b" stroke-opacity="1" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
+font-family="Noto Sans" font-size="12" font-weight="400" font-style="normal" 
 >
-<path vector-effect="none" fill-rule="nonzero" d="M11.5,1109.52 L10.5,1109.52 L6.5,1109.52 L6.5,1111.52 L10.5,1111.52 L11.5,1111.52 L12.5,1111.52 L13.5,1111.52 L17.5,1111.52 L17.5,1109.52 L13.5,1109.52 L12.5,1109.52 L11.5,1109.52"/>
+<polyline fill="none" vector-effect="none" points="4,7 9,12 14,7 " />
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Source Code Pro" font-size="11" font-weight="400" font-style="normal" 
+font-family="Noto Sans" font-size="12" font-weight="400" font-style="normal" 
 >
 </g>
 </g>
