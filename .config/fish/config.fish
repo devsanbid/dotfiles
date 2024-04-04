@@ -109,10 +109,10 @@ if test -d ~/Applications/depot_tools
 end
 
 
-## Starship prompt
-if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
-end
+# ## Starship prompt
+# if status --is-interactive
+#    source ("/usr/bin/starship" init fish --print-full-init | psub)
+# end
 
 if not test -x /usr/bin/yay; and test -x /usr/bin/paru
     alias yay 'paru --bottomup'
@@ -207,3 +207,19 @@ set -Ux fish_tmux_config $HOME/.config/tmux/tmux.conf
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 set TERM "xterm-kitty"
+
+#anoconda
+set --export PATH $HOME/anaconda3/bin $PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/sanbid/anaconda3/bin/conda
+else
+    if test -f "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/sanbid/anaconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+

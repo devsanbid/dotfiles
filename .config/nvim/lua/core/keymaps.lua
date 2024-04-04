@@ -7,13 +7,13 @@ keymap('v', '<S-j>', '<Nop>')
 keymap('n', '<S-j>', '<Nop>')
 
 -- navigation change for 1 month to use only escape
-keymap('i', 'jk', '<ESC>')
-keymap('i', 'JK', '<ESC>')
-keymap('i', 'kj', '<ESC>')
-keymap('i', 'jj', '<ESC>')
-keymap('i', 'Jk', '<ESC>')
-keymap('i', 'Jk', '<ESC>')
-
+-- keymap('i', 'jk', '<ESC>')
+-- keymap('i', 'JK', '<ESC>')
+-- keymap('i', 'kj', '<ESC>')
+-- keymap('i', 'jj', '<ESC>')
+-- keymap('i', 'Jk', '<ESC>')
+-- keymap('i', 'Jk', '<ESC>')
+--
 keymap('n', '<leader>jm', ':NodeAction<cr>')
 keymap('n', '<leader>jj', ':TSJToggle<cr>')
 
@@ -47,10 +47,8 @@ keymap("n", "sv", ":vsplit<Return><C-w>w")
 keymap({ 'n', 'x' }, 'j', 'gj', opts)
 keymap({ 'n', 'x' }, 'k', 'gk', opts)
 
-keymap('n', 'g*', 'g*zz', opts)
-keymap('n', 'g#', 'g#z', opts)
 
-vim.keymap.set("n", "*", ":keepjumps normal! mi*`i<CR>") -- " Use * to add w/out jumping
+vim.keymap.set("n", "<C-n>", ":keepjumps normal! mi*`i<CR>") -- " Use * to add w/out jumping
 vim.keymap.set('n', 'gx', ":silent! execute '!open ' . shellescape(expand('<cfile>'), 1)<CR>")
 
 
@@ -65,11 +63,9 @@ keymap('n', '<leader>w', ':w<cr>', opts)
 keymap('n', '<leader>q', ':q!<cr>', opts)
 
 -- up and down
-keymap('n', '<M-S-j>', '<C-d>zz')
-keymap('n', '<M-S-k>', '<C-u>zz')
+keymap('n', '<M-S-j>', '8jzz')
+keymap('n', '<M-S-k>', '8kzz')
 
-keymap('n', '<M-k>', '8k', opts)
-keymap('n', '<M-j>', '8j', opts)
 
 -- center while searching
 keymap('n', 'n', 'nzzzv')

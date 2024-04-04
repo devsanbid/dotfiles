@@ -1,9 +1,10 @@
+live_config_reload = true
 
 [window]
 padding = { x = 10, y = 10 }
 decorations = "None"
 dynamic_padding = true
-opacity = 0.91
+opacity = 0.89
 blur = true
 
 [font]
@@ -13,8 +14,19 @@ italic = { family = "SauceCodePro Nerd Font", style = "Italic" }
 offset = { x = 0, y = 5 }
 size = 19
 
+[env]
+USERNAME = "devsanbid"
+
 [cursor]
 style = { shape = "Block", blinking = "Off" }
+vi_mode_style = { shape = "Block", blinking = "Off" }
 thickness = 0.13
 
+[mouse]
+hide_when_typing = false
 
+[keyboard]
+bindings = [
+  { key = "h", mods = "Control|Shift", action = "ReceiveChar" },
+  { key = "l", mods = "Control|Shift", action = "ReceiveChar" },
+]

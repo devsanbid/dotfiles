@@ -1,7 +1,12 @@
 return {
   'mfussenegger/nvim-dap',
   dependencies = {
-    'rcarriga/nvim-dap-ui',
+    {
+      'rcarriga/nvim-dap-ui',
+      dependencies = {
+        'nvim-neotest/nvim-nio',
+      }
+    },
   },
   config = function()
     require('dapui').setup()
@@ -26,13 +31,13 @@ return {
       dapui.close()
     end
 
-    vim.keymap.set( 'n', '<Leader>da', ':DapToggleBreakpoint<CR>' )
+    vim.keymap.set('n', '<Leader>da', ':DapToggleBreakpoint<CR>')
     vim.keymap.set('n', '<leader>du', require('dapui').toggle)
     vim.keymap.set('n', '<Leader>ds', ':DapContinue<CR>')
     vim.keymap.set('n', '<Leader>dx', ':DapTerminate<CR>')
     vim.keymap.set('n', '<Leader>dn', ':DapStepOver<CR>')
     vim.keymap.set('n', '<Leader>do', ':DapStepOut<CR>')
     vim.keymap.set('n', '<Leader>di', ':DapStepInto<CR>')
-    vim.keymap.set({ 'n', 'v' }, '<M-K>', require('dapui').eval)
+    vim.keymap.set({ 'n', 'v' }, '<M-s>', require('dapui').eval)
   end,
 }
