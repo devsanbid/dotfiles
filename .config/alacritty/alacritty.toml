@@ -14,8 +14,6 @@ italic = { family = "SauceCodePro Nerd Font", style = "Italic" }
 offset = { x = 0, y = 5 }
 size = 19
 
-[env]
-USERNAME = "devsanbid"
 
 [cursor]
 style = { shape = "Block", blinking = "Off" }

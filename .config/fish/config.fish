@@ -221,5 +221,6 @@ else
         set -x PATH "/home/sanbid/anaconda3/bin" $PATH
     end
 end
+
 # <<< conda initialize <<<
 
