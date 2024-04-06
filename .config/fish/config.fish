@@ -17,6 +17,7 @@ set fish_autosuggestion_enabled 0
 zoxide init fish | source
 export LS_COLORS="$(vivid generate $HOME/.config/vivid/colorscheme-lsd.yaml)"
 set -Ux fish_tmux_config $HOME/.config/tmux/tmux.conf
+set TERM "xterm"
 
 
 fish_vi_key_bindings
