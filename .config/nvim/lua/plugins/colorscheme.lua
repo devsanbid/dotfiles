@@ -14,6 +14,7 @@ return {
       vim.cmd 'colorscheme rose-pine'
     end,
   },
+  { 'bluz71/vim-moonfly-colors', name = 'moonfly', lazy = false, priority = 1000 },
   {
     'folke/tokyonight.nvim',
     lazy = false,

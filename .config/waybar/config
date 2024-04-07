@@ -6,10 +6,10 @@
     "margin-bottom": 0,
     "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["custom/launcher", "cpu", "memory", "hyprland/workspaces"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "wlr/workspaces"],
     "modules-center": ["custom/spotify"],
     "modules-right": ["tray","custom/pacman", "disk", "pulseaudio", "network", "battery", "clock"],
-    "hyprland/workspaces": {
+    "wlr/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
@@ -28,7 +28,7 @@
         "format": "{}"
     },
     "tray": {
-        "spacing": 10
+        "spacing": 30
     },
     "custom/pacman": {
       "format": "{icon} {}",
