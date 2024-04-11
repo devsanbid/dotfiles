@@ -155,3 +155,17 @@ set -g fish_pager_color_selected_description e4e4e4
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/sanbid/anaconda3/bin/conda
+    eval /home/sanbid/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/sanbid/anaconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+

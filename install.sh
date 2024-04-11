@@ -22,7 +22,8 @@ applications=("aylurs-gtk-shell" "alacritty" "dunst" "fish" "gtk4" "hyprland"
 	"dolphin-plugins" "dog" "fastfetch" "base-devel" "firefox" "fzf" "xh" "gvfs"
 	"gzip" "unzip" "jq" "kvantum" "kvantum-qt5" "lua" "luarocks" "mpv" "luarocks"
 	"npm" "podman" "podman-docker" "polkit" "telegram-desktop" "tesseract" "tesseract-data-eng"
-	"tesseract-data-nep" "thorium-browser-bin" "thunar" "vim" "vlc" "acpi" "wps-office" "zoxide"
+	"tesseract-data-nep" "thorium-browser-bin" "thunar" "vim" "vlc" "acpi" "wps-office" "zoxide" "pamixer"
+  "wlsunset" "fuzzel"
 )
 
 # installing applications
