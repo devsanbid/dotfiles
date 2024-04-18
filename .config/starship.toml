@@ -17,7 +17,7 @@ shell.disabled = true
 
 command_timeout = 500
 [git_status]
-conflicted = 'X'
+conflicted = 'C'
 untracked = 'U'
 modified = 'M'
 staged = 'S'
