@@ -153,21 +153,21 @@ cmp.setup {
   },
 
   mapping = cmp.mapping.preset.insert {
-    ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-      ["<M-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-      ["<M-b>"] = cmp.mapping.scroll_docs(-4),
-      ["<C-f>"] = cmp.mapping.scroll_docs(4),
-      ["<C-Space>"] = cmp.mapping.complete(),
-      ["<C-e>"] = cmp.mapping.abort(),
-      ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-      ["<S-CR>"] = cmp.mapping.confirm({
-        behavior = cmp.ConfirmBehavior.Replace,
-        select = true,
-      }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-      ["<C-CR>"] = function(fallback)
-        cmp.abort()
-        fallback()
-      end,
+    ['<C-n>'] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
+    ['<M-p>'] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+    ['<M-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm { select = true }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ['<S-CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ['<C-CR>'] = function(fallback)
+      cmp.abort()
+      fallback()
+    end,
   },
 
   -- mapping = {
@@ -187,15 +187,13 @@ cmp.setup {
   --   ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's', 'c' }),
   -- },
   sources = cmp.config.sources {
-    { name = 'nvim_lsp', priority = 1000 }, -- LSP
+    { name = 'nvim_lsp',  priority = 1000 }, -- LSP
     { name = 'nvim_lua' },
     { name = 'cmp-tw2css' },
-    { name = 'neorg' },
     { name = 'luasnip' }, -- For luasnip users.
-    -- { name = 'ultisnips' },
-    { name = 'buffer' }, -- text within the current buffer
+    { name = 'buffer' },  -- text within the current buffer
     { name = 'fish' },
-    { name = 'path' }, -- file system paths
+    { name = 'path' },    -- file system paths
     {
       name = 'env',
       -- Defaults

@@ -1,5 +1,6 @@
 {
   "LuaSnip": { "branch": "master", "commit": "be7be2ca7f55bb881a7ffc16b2efa5af034ab06b" },
+  "cmp-ai": { "branch": "main", "commit": "70ab6d97110224c1ed1a023cd5f18efcaeefb1df" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
   "cmp-dotenv": { "branch": "main", "commit": "fd78929551010bc20602e7e663e42a5e14d76c96" },

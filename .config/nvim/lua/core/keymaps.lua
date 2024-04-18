@@ -5,6 +5,7 @@ vim.g.mapleader = ' '
 --remove keymap default i hate that
 keymap('v', '<S-j>', '<Nop>')
 keymap('n', '<S-j>', '<Nop>')
+keymap('n', "U", "g+")
 
 -- navigation change for 1 month to use only escape
 -- keymap('i', 'jk', '<ESC>')

@@ -99,17 +99,15 @@ alias cl 'clear'
 # Replace some more things with better alternatives
 alias cat 'bat --style header --style snip --style changes --style header'
 
-## Starship prompt
-if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
-end
+# Starship prompt
+ if status --is-interactive
+    source ("/usr/bin/starship" init fish --print-full-init | psub)
+ end
 
-# Syntax highlighting colors.
-set -g fish_color_autosuggestion 626262
-set -g fish_color_cancel 626262
-set -g fish_color_command 7cb3ff
-set -g fish_color_comment 949494 --italics
-
+# syntax highlight
+set -g fish_color_error red FF7276
+set -g OLLAMA_API_BASE_URL http://127.0.0.1:11434
+set -g OLLAMA_HOST 127.0.0.1:11434
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
