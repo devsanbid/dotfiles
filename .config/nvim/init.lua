@@ -1,6 +1,6 @@
-require("core")
-require("lazys")
-require("config.lsp")
-require("core.highlight")
+require("options")
+require("keymap")
+require("autocmd")
+require("lazyvim")
+require("lsp")
 
-vim.cmd("CodeiumDisable")

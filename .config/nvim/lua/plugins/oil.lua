@@ -57,10 +57,6 @@ return {
         return vim.startswith(name, 'node_modules')
       end,
       natural_order = true,
-      sort = {
-        { 'type', 'desc' },
-        { 'name', 'desc' },
-      },
     },
   },
 }
