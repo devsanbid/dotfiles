@@ -1,6 +1,3 @@
-
-
-
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   callback = function()
@@ -14,6 +11,7 @@ local hi = vim.api.nvim_set_hl
 hi(0, 'ColorColumn', { bg = 'gray' })
 hi(0, 'Visual', { bg = '#1e1e2e' })
 hi(0, 'Pmenu', { bg = '#1e1e2e' })
+hi(0, 'MatchParen', { bg = 'none', fg = "green"})
 
 hi(0, 'CmpItemAbbrDeprecated', { bg = 'NONE', strikethrough = true, fg = '#808080' })
 -- blue
