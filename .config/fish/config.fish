@@ -4,6 +4,7 @@ end
 
 set TERM "xterm-kitty"
 set fish_greeting
+set BROWSER = "brave"
 set EDITOR "nvim"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -x SHELL /usr/bin/fish
@@ -125,3 +126,5 @@ else
 end
 # <<< conda initialize <<<
 
+
+source ./private_variable.fish
