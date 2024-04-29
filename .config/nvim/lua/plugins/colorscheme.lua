@@ -1,22 +1,24 @@
 return {
   {
-
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    "Abstract-IDE/Abstract-cs",
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
     config = function()
-      require('rose-pine').setup {
+      require("rose-pine").setup({
         styles = {
           bold = false,
           italic = false,
           transparency = true,
         },
-      }
-      vim.cmd 'colorscheme rose-pine'
+      })
+      vim.cmd("colorscheme rose-pine")
     end,
   },
-  { 'bluz71/vim-moonfly-colors', name = 'moonfly', lazy = false, priority = 1000 },
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   {
-    'folke/tokyonight.nvim',
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
