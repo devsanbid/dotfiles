@@ -6,6 +6,9 @@ keymap('v', '<S-j>', '<Nop>')
 keymap('n', '<S-j>', '<Nop>')
 keymap('n', "U", "g+")
 
+keymap("n", "p", "p=`]", { silent = true })
+keymap("v", "y", "ygv<esc>")
+
 
 keymap({ 'n', 'x' }, 'j', 'gj', opts)
 keymap({ 'n', 'x' }, 'k', 'gk', opts)

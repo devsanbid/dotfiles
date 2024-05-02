@@ -6,7 +6,12 @@ opt.guicursor = ''
 vim.g.completion_abbr_length = 10 -- completion item (left)
 vim.g.completion_menu_length = 10 -- extra info for completion item (right)
 opt.nu = true
+opt.grepprg = "rg --vimgrep" -- Program to use for grep
 opt.relativenumber = true
+opt.spelllang = { -- Languages for spell checking
+	"en",
+}
+
 opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2

@@ -127,4 +127,4 @@ end
 # <<< conda initialize <<<
 
 
-source ./private_variable.fish
+source ~/.config/fish/private_variable.fish
