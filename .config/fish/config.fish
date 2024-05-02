@@ -113,6 +113,8 @@ set -g OLLAMA_HOST 127.0.0.1:11434
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+set --export JDK_JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/sanbid/anaconda3/bin/conda
