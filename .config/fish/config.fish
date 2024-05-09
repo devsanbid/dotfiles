@@ -112,6 +112,8 @@ set -g OLLAMA_HOST 127.0.0.1:11434
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+set --export ATAC_MAIN_DIR $HOME/.config/atac
+set --export ATAC_KEY_BINDINGS $HOME/.config/atac/key_bindings_templates/vim_key_bindings.toml
 
 set --export JDK_JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
