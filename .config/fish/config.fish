@@ -116,6 +116,9 @@ set --export ATAC_MAIN_DIR $HOME/.config/atac
 set --export ATAC_KEY_BINDINGS $HOME/.config/atac/key_bindings_templates/vim_key_bindings.toml
 
 set --export JDK_JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+set --export KITTY_ENABLE_WAYLAND 1
+
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

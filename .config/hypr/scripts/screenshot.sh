@@ -30,7 +30,7 @@ case $1 in
 p)  # print all outputs
     grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
 x)  # drag to manually snip an area / click on a window to print it
-    grimblast copysave area $temp_screenshot && tesseract -l eng $temp_screenshot - | wl-copy ;;
+    grimblast copysave area $temp_screenshot && tesseract -l eng $temp_screenshot - --oem 1 --psm 6 -c preserve_interword_spaces=1 | wl-copy ;;
 s) grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
 m)  # print focused monitor
     grimblast copysave outp && swappy -f $temp_screenshot ;;

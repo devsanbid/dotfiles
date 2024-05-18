@@ -116,13 +116,14 @@ vim.opt.completeopt = 'menu,menuone,noinsert'
 local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
+
 -- disable cmp in comment
 cmp.setup {
   enabled = function()
     -- disable completion in comments
     local context = require 'cmp.config.context'
     buftype = vim.api.nvim_buf_get_option(0, 'buftype')
-    if buftype == 'prompt' or buftype == 'acwrite' then
+    if buftype == 'prompt' or buftype == 'acwrite' or vim.g.cmp_disable then
       return false
     end
     -- keep command mode completion disable when cursor is in a comment

@@ -5,6 +5,8 @@ global.maplocalleader = ' '
 opt.guicursor = ''
 vim.g.completion_abbr_length = 10 -- completion item (left)
 vim.g.completion_menu_length = 10 -- extra info for completion item (right)
+
+vim.g.cmp_disable = false
 opt.nu = true
 opt.grepprg = "rg --vimgrep" -- Program to use for grep
 opt.relativenumber = true
@@ -19,7 +21,6 @@ opt.expandtab = true
 opt.smartcase = true
 opt.ignorecase = true
 opt.showtabline = 0
-opt.fillchars = { eob = ' ' }
 opt.linebreak = true
 opt.smartindent = true
 opt.wrap = false
