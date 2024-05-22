@@ -23,7 +23,7 @@ return {
           'astro',
           'jqls',
           'yamlls',
-          'pyright',
+          'basedpyright',
           'tailwindcss',
           'tsserver',
           'clangd',

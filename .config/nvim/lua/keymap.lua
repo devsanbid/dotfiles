@@ -15,6 +15,16 @@ keymap("n", "<leader>uc", function()
   end
 end)
 
+keymap("n", "<leader>uh", function()
+  local current_value = vim.g.inlay_hint_enable
+  if current_value then
+    vim.g.inlay_hint_enable = false
+  else
+    vim.g.inlay_hint_enable = true
+  end
+end)
+
+
 keymap("n", "p", "p=`]", { silent = true })
 keymap("v", "y", "ygv<esc>")
 

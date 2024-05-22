@@ -31,6 +31,12 @@ lspconfig.lua_ls.setup {
         callSnippet = 'Replace',
       },
     },
+    tsserver = {
+      inlayHints = true
+    },
+    basedpyright = {
+      inlayHints = true
+    }
   },
 }
 vim.diagnostic.config {
