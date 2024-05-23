@@ -19,7 +19,6 @@ return {
           'ansiblels',
           'ruff',
           'html',
-          'shellcheck',
           'prismals',
           'marksman',
           'astro',
