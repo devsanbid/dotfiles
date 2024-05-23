@@ -23,7 +23,7 @@ applications=("aylurs-gtk-shell" "alacritty" "dunst" "fish" "gtk4" "hyprland"
 	"gzip" "unzip" "jq" "kvantum" "kvantum-qt5" "lua" "luarocks" "mpv" "luarocks"
 	"npm" "podman" "podman-docker" "polkit" "telegram-desktop" "tesseract" "tesseract-data-eng"
 	"tesseract-data-nep" "thorium-browser-bin" "thunar" "vim" "vlc" "acpi" "wps-office" "zoxide" "pamixer"
-  "wlsunset" "fuzzel" "git-delta" "progress"
+  "wlsunset" "fuzzel" "git-delta" "progress" "grimshot" "grimblast-git" "swappy" "atac" "tokei"
 )
 
 # installing applications

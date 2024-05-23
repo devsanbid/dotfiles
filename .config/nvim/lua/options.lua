@@ -1,11 +1,20 @@
 local opt = vim.opt
 local global = vim.g
-global.maplocalleader = ';'
+vim.g.mapleader = " "
+global.maplocalleader = ' '
 opt.guicursor = ''
 vim.g.completion_abbr_length = 10 -- completion item (left)
 vim.g.completion_menu_length = 10 -- extra info for completion item (right)
+
+vim.g.cmp_disable = false
+vim.g.inlay_hint_enable = false
 opt.nu = true
+opt.grepprg = "rg --vimgrep" -- Program to use for grep
 opt.relativenumber = true
+opt.spelllang = { -- Languages for spell checking
+	"en",
+}
+
 opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2
@@ -13,7 +22,6 @@ opt.expandtab = true
 opt.smartcase = true
 opt.ignorecase = true
 opt.showtabline = 0
-opt.fillchars = { eob = ' ' }
 opt.linebreak = true
 opt.smartindent = true
 opt.wrap = false
@@ -45,3 +53,4 @@ opt.showmode = false
 opt.sidescrolloff = 8 -- Columns of context
 -- opt.updatetime = 50
 opt.colorcolumn = '80'
+

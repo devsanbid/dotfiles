@@ -4,6 +4,7 @@ end
 
 set TERM "xterm-kitty"
 set fish_greeting
+set BROWSER = "brave"
 set EDITOR "nvim"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -x SHELL /usr/bin/fish
@@ -90,7 +91,7 @@ alias ...... 'cd ../../../../..'
 alias ip 'ip -color'
 alias upd 'sudo pacman -Syu --noconfirm'
 alias wget 'wget -c '
-alias vim "nvim"
+alias vim "NVIM_APPNAME=nvim_clean nvim"
 alias cls 'clear'
 alias cl 'clear'
 
@@ -111,6 +112,13 @@ set -g OLLAMA_HOST 127.0.0.1:11434
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+set --export ATAC_MAIN_DIR $HOME/.config/atac
+set --export ATAC_KEY_BINDINGS $HOME/.config/atac/key_bindings_templates/vim_key_bindings.toml
+
+set --export JDK_JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+set --export KITTY_ENABLE_WAYLAND 1
+
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -125,3 +133,5 @@ else
 end
 # <<< conda initialize <<<
 
+
+source ~/.config/fish/private_variable.fish

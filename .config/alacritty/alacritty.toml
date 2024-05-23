@@ -4,15 +4,20 @@ live_config_reload = true
 padding = { x = 10, y = 10 }
 decorations = "None"
 dynamic_padding = true
-opacity = 0.89
+opacity = 0.59
 blur = true
 
+
+[colors.primary]
+background = '#000000'
+
+
 [font]
-normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
-bold = { family = "SauceCodePro Nerd Font", style = "Bold" }
-italic = { family = "SauceCodePro Nerd Font", style = "Italic" }
-offset = { x = 0, y = 5 }
-size = 19
+normal = { family = "Iosevka Term", style = "Regular" }
+bold = { family = "Iosevka Term", style = "Bold" }
+italic = { family = "Iosevka Term", style = "Italic" }
+offset = { x = 0, y = 3 }
+size = 20
 
 
 [cursor]
