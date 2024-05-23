@@ -8,3 +8,4 @@ return {
     require("indentmini").setup() -- use default config
   end,
 }
+

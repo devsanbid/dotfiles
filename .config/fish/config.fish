@@ -91,7 +91,7 @@ alias ...... 'cd ../../../../..'
 alias ip 'ip -color'
 alias upd 'sudo pacman -Syu --noconfirm'
 alias wget 'wget -c '
-alias vim "NVIM_APPNAME=nvim_clean nvim"
+alias vim "nvim"
 alias cls 'clear'
 alias cl 'clear'
 

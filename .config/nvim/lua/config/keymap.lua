@@ -1,29 +1,10 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
-vim.g.maplocalleader = " "
+
 
 keymap("v", "<S-j>", "<Nop>")
 keymap("n", "<S-j>", "<Nop>")
 keymap("n", "U", "g+")
-
-keymap("n", "<leader>uc", function()
-  local current_value = vim.g.cmp_disable
-  if current_value then
-    vim.g.cmp_disable = false
-  else
-    vim.g.cmp_disable = true
-  end
-end)
-
-keymap("n", "<leader>uh", function()
-  local current_value = vim.g.inlay_hint_enable
-  if current_value then
-    vim.g.inlay_hint_enable = false
-  else
-    vim.g.inlay_hint_enable = true
-  end
-end)
-
 
 keymap("n", "p", "p=`]", { silent = true })
 keymap("v", "y", "ygv<esc>")
@@ -58,9 +39,14 @@ keymap("n", "<leader>fr", ":Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope highlights<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope yank_history<cr>")
 
+keymap("n", "<leader>lf", function()
+  vim.lsp.buf.format()
+end, opts)
+
 keymap("n", "<leader>lr", function()
   vim.lsp.buf.rename()
 end, opts)
+
 keymap("n", "<leader>la", function()
   vim.lsp.buf.code_action()
 end, opts)
@@ -68,14 +54,22 @@ keymap("n", "<leader>li", ":LspInfo<cr>", opts)
 keymap("n", "<leader>lI", ":LspInstall<cr>", opts)
 keymap("n", "<leader>lm", ":Mason<cr>", opts)
 
-vim.keymap.set("n", "<leader>e", function()
-  if vim.bo.filetype == "oil" then
-    require("oil").close()
-  else
-    require("oil").open()
-  end
-end, opts)
-
 vim.cmd("vnoremap im aBoV")
 vim.cmd('nnoremap "" vi"')
 vim.cmd("vnoremap am aBjoV")
+
+
+keymap("n", "<leader>lr", function()
+  vim.lsp.buf.rename()
+end, opts)
+
+keymap("n", "<leader>w", ":w<cr>")
+keymap("n", "<leader>e", function()
+	local oil = require("oil")
+	if vim.bo.filetype == "oil" then
+		oil.close()
+	else
+		oil.open()
+	end
+end
+)

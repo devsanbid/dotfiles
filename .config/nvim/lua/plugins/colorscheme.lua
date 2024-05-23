@@ -1,8 +1,5 @@
 return {
-  {
-    "Abstract-IDE/Abstract-cs",
-  },
-  {
+    {
     "rose-pine/neovim",
     name = "rose-pine",
     config = function()
@@ -15,12 +12,5 @@ return {
       })
       vim.cmd("colorscheme rose-pine")
     end,
-  },
-  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
   },
 }
