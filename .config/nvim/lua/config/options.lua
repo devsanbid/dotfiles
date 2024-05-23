@@ -9,8 +9,8 @@ opt.spelllang = { -- Languages for spell checking
 	"en",
 }
 
-
 opt.tabstop = 1
+vim.cmd("set formatoptions-=cro")
 opt.softtabstop = 1
 opt.shiftwidth = 1
 opt.expandtab = true
@@ -41,7 +41,6 @@ opt.pumheight = 8
 opt.pumwidth = 5
 opt.mouse = ''
 opt.autowrite = true -- Enable auto write
-opt.formatoptions = 'jcroqlnt' -- tcqj
 opt.grepprg = 'rg --vimgrep'
 opt.pumblend = 10 -- Popup blend
 opt.showmode = false
