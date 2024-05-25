@@ -9,10 +9,10 @@ opt.spelllang = { -- Languages for spell checking
 	"en",
 }
 
-opt.tabstop = 1
+opt.tabstop = 4
 vim.cmd("set formatoptions-=cro")
-opt.softtabstop = 1
-opt.shiftwidth = 1
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.smartcase = true
 opt.ignorecase = true
