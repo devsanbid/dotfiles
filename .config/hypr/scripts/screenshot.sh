@@ -8,7 +8,7 @@ source $ScrDir/globalcontrol.sh
 swpy_dir="$HOME/.config/swappy"
 save_dir="$HOME/Documents/Screenshot/"
 save_file=$(date +'%y%m%d_%Hh%Mm%Ss_screenshot.png')
-temp_screenshot="/tmp/screenshot.png"
+temp_screenshot="/tmp/screenshot.jpg"
 
 mkdir -p $save_dir
 mkdir -p $swpy_dir
@@ -31,7 +31,7 @@ p)  # print all outputs
     grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
 x)  # drag to manually snip an area / click on a window to print it
     grimblast copysave area $temp_screenshot && tesseract -l eng $temp_screenshot - --oem 1 --psm 6 -c preserve_interword_spaces=1 | wl-copy ;;
-s) grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
+s) grimblast copysave area $temp_screenshot && wl-copy;;
 m)  # print focused monitor
     grimblast copysave outp && swappy -f $temp_screenshot ;;
 *)  # invalid option

@@ -4,7 +4,9 @@ end
 
 set TERM "xterm-kitty"
 set fish_greeting
-set BROWSER = "brave"
+set MANPAGER "sh -c 'col -b | bat -l man -p'"
+
+set BROWSER "brave"
 set EDITOR "nvim"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -x SHELL /usr/bin/fish
@@ -21,7 +23,12 @@ set fish_cursor_default block
 set fish_autosuggestion_enabled 0
 zoxide init fish | source
 export LS_COLORS="$(vivid generate $HOME/.config/vivid/colorscheme-lsd.yaml)"
-# set -Ux fish_tmux_config $HOME/.config/tmux/tmux.conf
+
+if not set -q TMUX
+    tmux new-session -d -s base
+    eval $TMUX
+    tmux attach-session -d -t base
+end
 
 
 fish_vi_key_bindings

@@ -1,19 +1,19 @@
 [pyprland]
 plugins = [
-  "scratchpads",
-  "lost_windows",
-  "monitors",
-  "toggle_dpms",
-  "magnify",
-  "expose",
-  "shift_monitors",
-  "workspaces_follow_focus",
+    "scratchpads",
+    "lost_windows",
+    "monitors",
+    "toggle_dpms",
+    "magnify",
+    "expose",
+    "shift_monitors",
+    "workspaces_follow_focus",
 ]
 
 
 [scratchpads.term]
 animation = "fromBottom"
-command = "kitty --class kitty-dropterm -e nvim -c 'set nonumber norelativenumber laststatus=0' ~/Desktop/learn/python/test.py"
+command = "kitty --class kitty-dropterm -e nvim -c 'set nonumber norelativenumber nocursorline laststatus=0' ~/Desktop/learn/python/test.py"
 class = "kitty-dropterm"
 size = "75% 42%"
 max_size = "1920px 100%"
@@ -22,10 +22,8 @@ margin = 50
 
 [scratchpads.ai]
 animation = "fromBottom"
-command = "brave-browser-nightly --profile-directory=Default --app=http://localhost:30001"
+command = "brave-browser-nightly --profile-directory=Default --app=https://localhost:30001"
 class = "Brave-browser-nightly"
 size = "75% 42%"
 max_size = "1920px 100%"
 process_tracking = false
-
-

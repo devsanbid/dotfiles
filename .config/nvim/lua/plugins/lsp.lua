@@ -33,7 +33,15 @@ return {
 			local cmp_action = lsp_zero.cmp_action()
 
 			cmp.setup({
-				formatting = lsp_zero.cmp_format({ details = true }),
+				formatting = {
+					fields = { "abbr", "kind" },
+					format = function(_, vim_item)
+						vim_item.menu = ""
+						--vim_item.kind = ""
+						--vim_item.abbr = ""
+						return vim_item
+					end,
+				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-u>"] = cmp.mapping.scroll_docs(-4),
@@ -62,7 +70,7 @@ return {
 		config = function()
 			vim.diagnostic.config({
 				underline = true,
-                update_in_insert = true,
+				update_in_insert = false,
 				virtual_text = {
 					spacing = 4,
 					source = "if_many",
