@@ -1,17 +1,17 @@
 return {
-  "Exafunction/codeium.vim",
-  config = function()
-    vim.keymap.set("i", "<C-l>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
-    vim.keymap.set("i", "<C-;>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
-    vim.keymap.set("i", "<C-,>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
-    vim.keymap.set("i", "<C-x>", function() return vim.fn["codeium#Clear"]() end, { expr = true })
-    vim.keymap.set("n", "<leader>;", function()
-      if vim.g.codeium_enabled == true then
-        vim.cmd "CodeiumDisable"
-      else
-        vim.cmd "CodeiumEnable"
-      end
-    end, { noremap = true, desc = "Toggle Codeium active" })
-  end,
+    enabled = false,
+	"Exafunction/codeium.nvim",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"hrsh7th/nvim-cmp",
+	},
+	config = function()
+        require("codeium").setup({})
+		require("cmp").setup({
+			sources = {
+				{ name = "codeium" },
+				{ name = "nvim_lsp" },
+			},
+		})
+	end,
 }
-

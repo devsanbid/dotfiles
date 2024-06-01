@@ -1,10 +1,10 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-
 keymap("v", "<S-j>", "<Nop>")
 keymap("n", "<S-j>", "<Nop>")
 keymap("n", "U", "g+")
+
 
 keymap("n", "p", "p=`]", { silent = true })
 keymap("v", "y", "ygv<esc>")
@@ -40,15 +40,15 @@ keymap("n", "<leader>fh", ":Telescope highlights<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope yank_history<cr>")
 
 keymap("n", "<leader>lf", function()
-  vim.lsp.buf.format()
+	vim.lsp.buf.format()
 end, opts)
 
 keymap("n", "<leader>lr", function()
-  vim.lsp.buf.rename()
+	vim.lsp.buf.rename()
 end, opts)
 
 keymap("n", "<leader>la", function()
-  vim.lsp.buf.code_action()
+	vim.lsp.buf.code_action()
 end, opts)
 keymap("n", "<leader>li", ":LspInfo<cr>", opts)
 keymap("n", "<leader>lI", ":LspInstall<cr>", opts)
@@ -58,9 +58,8 @@ vim.cmd("vnoremap im aBoV")
 vim.cmd('nnoremap "" vi"')
 vim.cmd("vnoremap am aBjoV")
 
-
 keymap("n", "<leader>lr", function()
-  vim.lsp.buf.rename()
+	vim.lsp.buf.rename()
 end, opts)
 
 keymap("n", "<leader>w", ":w<cr>")
@@ -71,5 +70,4 @@ keymap("n", "<leader>e", function()
 	else
 		oil.open()
 	end
-end
-)
+end)

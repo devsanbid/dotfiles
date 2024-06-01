@@ -12,6 +12,17 @@ vim.filetype.add({
 	},
 })
 
+
+-- make a autccmd for python to run specific keymap
+autocmd("FileType", {
+    group = augroup("python"),
+    pattern = "python",
+    callback = function(args)
+        vim.keymap.set("n", "<leader>;", "mmA:<ESC>`m", { silent = true })
+    end,
+})
+
+
 autocmd("FileType", {
 	group = augroup("close_with_q"),
 	pattern = {

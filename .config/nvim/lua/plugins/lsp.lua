@@ -34,13 +34,13 @@ return {
 
 			cmp.setup({
 				formatting = {
-					fields = { "abbr", "kind" },
-					format = function(_, vim_item)
-						vim_item.menu = ""
-						--vim_item.kind = ""
-						--vim_item.abbr = ""
+					format = function(entry, vim_item)
+						vim_item.abbr = string.sub(vim_item.abbr, 1, 12) 
 						return vim_item
 					end,
+				},
+				sources = {
+					{ name = "nvim_lsp" },
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
@@ -48,6 +48,7 @@ return {
 					["<C-d>"] = cmp.mapping.scroll_docs(4),
 					["<C-f>"] = cmp_action.luasnip_jump_forward(),
 					["<C-b>"] = cmp_action.luasnip_jump_backward(),
+                    ['<CR>'] = cmp.mapping.confirm({ select = false })
 				}),
 				snippet = {
 					expand = function(args)

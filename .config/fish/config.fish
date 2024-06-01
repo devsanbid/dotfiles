@@ -24,12 +24,6 @@ set fish_autosuggestion_enabled 0
 zoxide init fish | source
 export LS_COLORS="$(vivid generate $HOME/.config/vivid/colorscheme-lsd.yaml)"
 
-if not set -q TMUX
-    tmux new-session -d -s base
-    eval $TMUX
-    tmux attach-session -d -t base
-end
-
 
 fish_vi_key_bindings
 set -g fish_key_bindings fish_vi_key_bindings
