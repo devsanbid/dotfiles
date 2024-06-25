@@ -22,7 +22,7 @@ margin = 50
 
 [scratchpads.ai]
 animation = "fromBottom"
-command = "brave-browser-nightly --profile-directory=Default --app=http://localhost:3210"
+command = "brave-browser-nightly --profile-directory=Default --app=https://gemini.google.com/app"
 class = "Brave-browser-nightly"
 size = "75% 42%"
 max_size = "1920px 100%"

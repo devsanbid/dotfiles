@@ -5,9 +5,11 @@ end
 set TERM "xterm-kitty"
 set fish_greeting
 set MANPAGER "sh -c 'col -b | bat -l man -p'"
+set _JAVA_AWT_WM_NONREPARENTING 1
 
 set BROWSER "brave"
 set EDITOR "nvim"
+set PANGOCAIRO_BACKEND "fc"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -x SHELL /usr/bin/fish
 set -x LIBVIRT_DEFAULT_URL 'qemu:///system'
@@ -123,15 +125,15 @@ set --export KITTY_ENABLE_WAYLAND 1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/sanbid/anaconda3/bin/conda
-    eval /home/sanbid/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
-        . "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/home/sanbid/anaconda3/bin" $PATH
-    end
-end
+# if test -f /home/sanbid/anaconda3/bin/conda
+#     eval /home/sanbid/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# else
+#     if test -f "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
+#         . "/home/sanbid/anaconda3/etc/fish/conf.d/conda.fish"
+#     else
+#         set -x PATH "/home/sanbid/anaconda3/bin" $PATH
+#     end
+# end
 # <<< conda initialize <<<
 
 

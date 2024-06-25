@@ -9,9 +9,7 @@ opt.spelllang = { -- Languages for spell checking
 	"en",
 }
 
-vim.g.cmp_supermaven_enable = true
 opt.tabstop = 4
-
 vim.cmd("set formatoptions-=cro")
 opt.softtabstop = 4
 opt.shiftwidth = 4
