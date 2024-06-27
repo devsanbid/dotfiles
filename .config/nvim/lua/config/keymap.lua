@@ -5,7 +5,6 @@ keymap("v", "<S-j>", "<Nop>")
 keymap("n", "<S-j>", "<Nop>")
 keymap("n", "U", "g+")
 
-
 keymap("n", "p", "p=`]", { silent = true })
 keymap("v", "y", "ygv<esc>")
 
@@ -31,7 +30,9 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 --telescope
-keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
+keymap("n", "<leader>ff", function()
+	require("telescope.builtin").find_files({ hidden = false })
+end, opts)
 keymap("n", "<leader><leader>", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fH", ":Telescope help_tags<cr>", opts)
