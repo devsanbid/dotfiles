@@ -24,7 +24,7 @@ margin = 50
 animation = "fromBottom"
 command = "brave-browser-nightly --profile-directory=Default --app=https://gemini.google.com/app"
 class = "Brave-browser-nightly"
-size = "75% 42%"
+size = "55% 35%"
 max_size = "1920px 100%"
 process_tracking = false
 
