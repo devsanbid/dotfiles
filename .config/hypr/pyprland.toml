@@ -1,13 +1,13 @@
 [pyprland]
 plugins = [
-  "scratchpads",
-  "lost_windows",
-  "monitors",
-  "toggle_dpms",
-  "magnify",
-  "expose",
-  "shift_monitors",
-  "workspaces_follow_focus",
+    "scratchpads",
+    "lost_windows",
+    "monitors",
+    "toggle_dpms",
+    "magnify",
+    "expose",
+    "shift_monitors",
+    "workspaces_follow_focus",
 ]
 
 
@@ -22,10 +22,15 @@ margin = 50
 
 [scratchpads.ai]
 animation = "fromBottom"
-command = "brave-browser-nightly --profile-directory=Default --app=https://gemini.google.com/app"
+command = "brave-browser-nightly --profile-directory=Default --app=http://localhost:3210/chat"
 class = "Brave-browser-nightly"
 size = "55% 35%"
 max_size = "1920px 100%"
 process_tracking = false
 
-
+[scratchpads.ai_response]
+command = "foot -T ai_response"
+animation = "fromTop"
+unfocus = "hide"
+size = "75% 50%"
+position = "top center"

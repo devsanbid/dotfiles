@@ -1,0 +1,34 @@
+#!/bin/bash
+
+get_screenshot_text() {
+    temp_screenshot=$(mktemp --suffix=.png)
+    if ! grim -g "$(slurp -b 00000000 -c 00000000)" "$temp_screenshot"; then
+        echo "Screenshot capture failed." >&2 
+        rm "$temp_screenshot"  
+        exit 1  
+    fi
+    tesseract -l eng "$temp_screenshot" - --oem 1 --psm 6 -c preserve_interword_spaces=1 | wl-copy
+    rm "$temp_screenshot"
+}
+
+get_ai_response() {
+    clipboard_content=$(wl-paste)
+    temp_response=$(mktemp)
+    clipboard_content+="\nFrom the following options, choose the single most correct answer. Do not provide any explanation or justification"
+    echo "$clipboard_content" | ollama run llama3:latest 2> /dev/null > "$temp_response"
+
+    if [ -s "$temp_response" ]; then  
+        ai_response=$(cat "$temp_response")
+        cat "$temp_response" | wl-copy
+        notify-send -h string:bgcolor:#FFFFFF  -h string:fgcolor:#ADACAD "." "$ai_response" -t 2500
+    else
+        echo "No response received from the AI." >&2
+    fi
+    rm "$temp_response"
+}
+
+trap 'echo "Exiting..." >&2; exit 1' INT
+
+get_screenshot_text || exit  
+get_ai_response &  
+

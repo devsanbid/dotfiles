@@ -28,6 +28,7 @@ keymap("n", "<M-S-k>", "8kzz")
 -- center while searching
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
+keymap('n', '<leader>x','gg_dG')
 
 --telescope
 keymap("n", "<leader>ff", function()
