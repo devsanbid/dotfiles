@@ -25,8 +25,9 @@ return {
 				lualine_b = { "branch" },
 				lualine_c = { "filename" },
 				lualine_x = {},
+				lualine_z = { require("grapple-line").status },
+
 				lualine_y = {},
-				lualine_z = {},
 			},
 			inactive_sections = {
 				lualine_a = {},

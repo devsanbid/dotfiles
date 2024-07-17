@@ -35,8 +35,8 @@ return {
 			cmp.setup({
 				formatting = {
 					format = function(entry, vim_item)
-						vim_item.abbr = string.sub(vim_item.abbr, 1, 12) 
-						return vim_item
+						vim_item.abbr = string.sub(vim_item.abbr, 1, 12)
+						return require("nvim-highlight-colors").format(entry, vim_item)
 					end,
 				},
 				sources = {

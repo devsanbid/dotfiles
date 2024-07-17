@@ -28,9 +28,3 @@ size = "55% 35%"
 max_size = "1920px 100%"
 process_tracking = false
 
-[scratchpads.ai_response]
-command = "foot -T ai_response"
-animation = "fromTop"
-unfocus = "hide"
-size = "75% 50%"
-position = "top center"
