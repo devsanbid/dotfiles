@@ -13,11 +13,11 @@ plugins = [
 
 [scratchpads.term]
 animation = "fromBottom"
-command = "kitty --class kitty-dropterm -e nvim -c 'set nonumber norelativenumber laststatus=0' ~/Desktop/learn/python/test.py"
+command = "alacritty --class kitty-dropterm -e nvim ~/Desktop/demo.py"
 class = "kitty-dropterm"
-size = "75% 42%"
+size = "23% 15%"
 max_size = "1920px 100%"
-margin = 50
+margin = 0
 
 
 [scratchpads.ai]

@@ -4,12 +4,15 @@ live_config_reload = true
 padding = { x = 10, y = 10 }
 decorations = "None"
 dynamic_padding = true
-opacity = 0.59
+opacity = 1
 blur = true
 
+[colors]
+cursor = { cursor = "#a5a5a5", text="#bebebe"}
 
 [colors.primary]
-background = '#000000'
+background = '#FFFFFF'
+foreground = '#bebebe'
 
 
 [font]
@@ -17,13 +20,12 @@ normal = { family = "Iosevka Term", style = "Regular" }
 bold = { family = "Iosevka Term", style = "Bold" }
 italic = { family = "Iosevka Term", style = "Italic" }
 offset = { x = 0, y = 3 }
-size = 20
+size = 12
 
 
 [cursor]
-style = { shape = "Block", blinking = "Off" }
-vi_mode_style = { shape = "Block", blinking = "Off" }
-thickness = 0.13
+style = { shape = "Underline", blinking = "Never" }
+vi_mode_style = { shape = "Underline", blinking = "Never" }
 
 [mouse]
 hide_when_typing = false
