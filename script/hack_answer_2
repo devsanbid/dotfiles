@@ -1,0 +1,9 @@
+#!/bin/bash
+
+temp_response=$(mktemp)
+docker exec second fish -c 'root/gemini/answer.sh' > "$temp_response"
+sleep 1
+cat "$temp_response" | wl-copy
+notify-send -h string:bgcolor:#FFFFFF  -h string:fgcolor:#ADACAD "." "'done'" -t 1500
+
+
