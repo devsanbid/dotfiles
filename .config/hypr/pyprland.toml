@@ -13,7 +13,7 @@ plugins = [
 
 [scratchpads.term]
 animation = "fromBottom"
-command = "alacritty --class kitty-dropterm -e nvim ~/Desktop/demo.py"
+command = "alacritty --class kitty-dropterm -e nvim ~/Desktop/fixanswer.txt"
 class = "kitty-dropterm"
 size = "23% 15%"
 max_size = "1920px 100%"

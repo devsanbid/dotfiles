@@ -74,6 +74,9 @@
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
     transparency = 100
+    frame_color = "#222222"
+    foreground ="#222222"
+    background ="#ffffff"
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -323,16 +326,16 @@
 #    summary
 #
 # and you can override the
-#    background
-#    foreground
+    background = "#FFFFFF"
+    foreground = "#ADACAD"
 #    format
-#    frame_color
+    frame_color = "#FFFFFF"
 #    fullscreen
 #    new_icon
 #    set_stack_tag
 #    set_transient
 #    set_category
-#    timeout
+    timeout = 1500
 #    urgency
 #    icon_position
 #    skip_display
