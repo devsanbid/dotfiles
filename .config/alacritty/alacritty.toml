@@ -13,9 +13,6 @@ background = '#000000'
 
 
 [font]
-normal = { family = "Iosevka Term", style = "Regular" }
-bold = { family = "Iosevka Term", style = "Bold" }
-italic = { family = "Iosevka Term", style = "Italic" }
 offset = { x = 0, y = 3 }
 size = 20
 
